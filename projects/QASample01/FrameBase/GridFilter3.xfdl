@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="GridFilter" classname="GridFilter" left="0" top="0" width="1024" height="1060" titletext="New Form" onload="GridFilter_onload">
+    <Layouts>
+      <Layout width="1024" height="1060">
+        <Grid id="grd_sample" taborder="0" useinputpanel="false" cellsizingtype="none" left="10" top="10" width="710" height="380" cellmovingtype="col" onselectchanged="grd_sample_onselectchanged" oncellclick="grd_sample_oncellclick" binddataset="ds_sample" treeusebutton="use" treeusecheckbox="false" treeuseimage="false" treeuseline="false" oncloseup="grd_sample_oncloseup" showselection="true" selecttype="area" autosizebandtype="allband" showgroupbar="false" treeinitstatus="expand,all" cellsizebandtype="allband">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="28" band="left"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="198"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="24" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell/>
+                <Cell col="1" text="컬럼1" filtercolumn="col1" filtertype="condition"/>
+                <Cell col="2" text="컬럼2" filtercolumn="col2" filterdisplay="setfilter" filtertype="select"/>
+                <Cell col="3" text="컬럼3" filtercolumn="col3" filtertype="condition,select"/>
+                <Cell col="4" text="컬럼4" sortcolumn="col4"/>
+                <Cell col="5" text="col5" filtercolumn="col5" filterdisplay="basic,setfilter" filtertype="condition,select"/>
+                <Cell col="6" text="col6" filtercolumn="col7"/>
+                <Cell col="7" text="col7"/>
+              </Band>
+              <Band id="body">
+                <Cell expr="currow" displaytype="text"/>
+                <Cell col="1" text="bind:col1" displaytype="normal" edittype="normal"/>
+                <Cell col="2" displaytype="normal" combodataset="ds_type" combocodecol="code" combodatacol="value" text="bind:col2"/>
+                <Cell col="3" text="bind:col3" suppress="1"/>
+                <Cell col="4" text="bind:col4" expandshow="show"/>
+                <Cell col="5" displaytype="date" text="bind:col5"/>
+                <Cell col="6" displaytype="number" style="align:right;" text="bind:col7"/>
+                <Cell col="7" displaytype="normal" style="align:right;" text="11"/>
+              </Band>
+              <Band id="summary">
+                <Cell/>
+                <Cell col="1"/>
+                <Cell col="2"/>
+                <Cell col="3"/>
+                <Cell col="4"/>
+                <Cell col="5"/>
+                <Cell col="6"/>
+                <Cell col="7"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button01_00" taborder="1" text="ClearFilter" left="730" top="10" width="120" height="30" onclick="Button01_00_onclick" namea="111"/>
+        <Static id="Static00" taborder="2" left="40" top="420" width="717" height="120" text="1. head cell의 filtercolumn 프로퍼티에 dataset의 column id를 설정 하면 icon이 나타남.&#13;&#10;&#13;&#10;2. head cell의 filtertype 프로퍼티에 사용할 필터 팝업 UI를 설정할 수 있음.&#13;&#10;&#13;&#10;(icon은 임의로 만든 것이므로, icon의 background가 하얗게 표시될 수 있음.)" verticalAlign="top"/>
+        <Button id="Button02" taborder="3" text="filtercolumn=null:col1" left="730" top="58" width="130" height="32" onclick="Button02_onclick"/>
+        <Button id="Button03" taborder="4" text="filtercolumn설정:col1" left="866" top="58" width="120" height="32" onclick="Button03_onclick"/>
+        <Button id="Button05" taborder="5" text="ds_sample:col1데이터변경" left="730" top="239" width="150" height="30" onclick="Button05_onclick"/>
+        <Button id="Button06" taborder="6" text="ds_sample:filterstr설정:col3" left="730" top="271" width="164" height="30" onclick="Button06_onclick"/>
+        <Button id="Button00" taborder="7" text="ds변경" left="730" top="311" width="120" height="33" onclick="Button00_onclick"/>
+        <Button id="Button08" taborder="8" text="ds_sample:keystring정렬:col4" left="856" top="311" width="164" height="30" onclick="Button08_onclick"/>
+        <Button id="Button10" taborder="9" text="filtercolumn=null:col5" left="730" top="170" width="120" height="32" onclick="Button10_onclick"/>
+        <Button id="Button11" taborder="10" text="filtercolumn설정:col5" left="856" top="170" width="120" height="32" onclick="Button11_onclick"/>
+        <Button id="Button20" taborder="11" text="filtertype=null:col1" left="730" top="98" width="120" height="32" onclick="Button20_onclick"/>
+        <Button id="Button21" taborder="12" text="filtertype=condition/select:col1" left="730" top="130" width="184" height="32" onclick="Button21_onclick"/>
+        <Button id="Button37" taborder="13" text="TR" left="730" top="350" width="121" height="40" onclick="Button37_onclick"/>
+        <Button id="Button01" taborder="14" text="sortcolumn=null:col4" left="868" top="98" width="121" height="32" onclick="Button01_onclick"/>
+        <Button id="Button08_00" taborder="15" text="ds:keystring,filterstr확인" left="871" top="14" width="149" height="34" onclick="Button0800_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset enableevent="true" firefirstcount="0" firenextcount="0" id="ds_sample" preload="true" updatecontrol="true" useclientlayout="false">
+        <ColumnInfo>
+          <Column id="col1" size="256" type="STRING" prop="TEXT"/>
+          <Column id="col2" size="256" type="INT" prop="MIN"/>
+          <Column id="col3" size="256" type="STRING"/>
+          <Column id="col4" size="256" type="STRING"/>
+          <Column id="col5" size="256" type="DATE"/>
+          <Column id="col6" size="256" type="INT"/>
+          <Column id="col7" size="256" type="FLOAT"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="col1">AnyCall</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">SCH-W420</Col>
+            <Col id="col5">20081223</Col>
+            <Col id="col6">235000</Col>
+            <Col id="col7">1.1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">AnyCall</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">SCH-M490</Col>
+            <Col id="col5">20090111</Col>
+            <Col id="col6">353000</Col>
+            <Col id="col7">1.4</Col>
+          </Row>
+          <Row>
+            <Col id="col1">AnyCall</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">4G</Col>
+            <Col id="col4">SCH-W270</Col>
+            <Col id="col5">20090209</Col>
+            <Col id="col6">498000</Col>
+            <Col id="col7">1.8</Col>
+          </Row>
+          <Row>
+            <Col id="col1">AnyCall</Col>
+            <Col id="col2">3</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">SCH-W570</Col>
+            <Col id="col5">20081201</Col>
+            <Col id="col6">351000</Col>
+            <Col id="col7">2.1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">AnyCall</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">SCH-W550</Col>
+            <Col id="col5">20090125</Col>
+            <Col id="col6">150000</Col>
+            <Col id="col7">2.0</Col>
+          </Row>
+          <Row>
+            <Col id="col1">AnyCall</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">SCH-W750</Col>
+            <Col id="col5">20090225</Col>
+            <Col id="col6">589000</Col>
+            <Col id="col7">1.2</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">LG-KH2100</Col>
+            <Col id="col5"/>
+            <Col id="col6">256000</Col>
+            <Col id="col7">1.5</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">LG-KU6000</Col>
+            <Col id="col5">20090212</Col>
+            <Col id="col6">430000</Col>
+            <Col id="col7">2.9</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">LG-KU9100</Col>
+            <Col id="col5">20081205</Col>
+            <Col id="col6">360000</Col>
+            <Col id="col7">2.8</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">LG-KH8000</Col>
+            <Col id="col5"/>
+            <Col id="col6">470000</Col>
+            <Col id="col7">2.7</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">LG-KH6500</Col>
+            <Col id="col5">20090219</Col>
+            <Col id="col6">560000</Col>
+            <Col id="col7">2.8</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">3</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">canU-S1000</Col>
+            <Col id="col5">20090303</Col>
+            <Col id="col6">270000</Col>
+            <Col id="col7">3.5</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">4G</Col>
+            <Col id="col4">canU801EX</Col>
+            <Col id="col5"/>
+            <Col id="col6"/>
+            <Col id="col7">1.5</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">canU502S</Col>
+            <Col id="col5">20090109</Col>
+            <Col id="col6">300000</Col>
+            <Col id="col7">1.0</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">3</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">canU-S1000</Col>
+            <Col id="col5">20090303</Col>
+            <Col id="col6">270000</Col>
+            <Col id="col7">1.6</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">canU801EX</Col>
+            <Col id="col5"/>
+            <Col id="col6"/>
+            <Col id="col7">1.9</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">canU502S</Col>
+            <Col id="col5">20090109</Col>
+            <Col id="col6">300000</Col>
+            <Col id="col7">1.8</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset enableevent="true" firefirstcount="0" firenextcount="0" id="ds_sample00" preload="true" updatecontrol="true" useclientlayout="false">
+        <ColumnInfo>
+          <Column id="col1" size="256" type="STRING" prop="TEXT"/>
+          <Column id="col2" size="256" type="INT" prop="MIN"/>
+          <Column id="col3" size="256" type="STRING"/>
+          <Column id="col4" size="256" type="STRING"/>
+          <Column id="col5" size="256" type="DATE"/>
+          <Column id="col6" size="256" type="INT"/>
+          <Column id="col7" size="256" type="INT"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="col1">Any1Call</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">SCH-W420</Col>
+            <Col id="col5">20081223</Col>
+            <Col id="col6">235000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">Any2Call</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">SCH-M490</Col>
+            <Col id="col5">20090111</Col>
+            <Col id="col6">353000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">AnyCall</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">4G</Col>
+            <Col id="col4">SCH-W270</Col>
+            <Col id="col5">20090209</Col>
+            <Col id="col6">498000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">An4yCall</Col>
+            <Col id="col2">3</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">SCH-W570</Col>
+            <Col id="col5">20081201</Col>
+            <Col id="col6">351000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">AnyCall</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">SCH-W550</Col>
+            <Col id="col5">20090125</Col>
+            <Col id="col6">150000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">AnyCall</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">SCH-W750</Col>
+            <Col id="col5">20090225</Col>
+            <Col id="col6">589000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">LG-KH2100</Col>
+            <Col id="col5"/>
+            <Col id="col6">256000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">LG-KU6000</Col>
+            <Col id="col5">20090212</Col>
+            <Col id="col6">430000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">LG-KU9100</Col>
+            <Col id="col5">20081205</Col>
+            <Col id="col6">360000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">LG-KH8000</Col>
+            <Col id="col5"/>
+            <Col id="col6">470000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">cyon</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">LG-KH6500</Col>
+            <Col id="col5">20090219</Col>
+            <Col id="col6">560000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">3</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">canU-S1000</Col>
+            <Col id="col5">20090303</Col>
+            <Col id="col6">270000</Col>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">4G</Col>
+            <Col id="col4">canU801EX</Col>
+            <Col id="col5"/>
+            <Col id="col6"/>
+            <Col id="col7">1</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">canU502S</Col>
+            <Col id="col5">20090109</Col>
+            <Col id="col6">300000</Col>
+            <Col id="col7"/>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">3</Col>
+            <Col id="col3">2G</Col>
+            <Col id="col4">canU-S1000</Col>
+            <Col id="col5">20090303</Col>
+            <Col id="col6">270000</Col>
+            <Col id="col7">410000</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">2</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">canU801EX</Col>
+            <Col id="col5"/>
+            <Col id="col6"/>
+            <Col id="col7">600000</Col>
+          </Row>
+          <Row>
+            <Col id="col1">팬택&amp;큐리</Col>
+            <Col id="col2">1</Col>
+            <Col id="col3">3G</Col>
+            <Col id="col4">canU502S</Col>
+            <Col id="col5">20090109</Col>
+            <Col id="col6">300000</Col>
+            <Col id="col7"/>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[var data_url = "http://172.10.12.33:8080/sort_filter_data.xml"
+
+
+this.Button01_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.grd_sample.clearFilter();
+};
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	//trace(this.grd_sample.getCellProperty("head",1, 'sortcolumn'))
+	this.grd_sample.setCellProperty("head",1, 'filtercolumn',null)
+};
+
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.grd_sample.setCellProperty("head",1, 'filtercolumn',"col1")
+};
+
+this.Button05_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_sample.setColumn(0, 0, "test")
+};
+
+this.Button06_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	//this.ds_sample.keystring = "S:col3-"
+	this.ds_sample.filterstr = "col3!='4G'"
+};
+
+this.Button08_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_sample.keystring = "S:-col4"
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.grd_sample.binddataset = this.ds_sample00
+};
+
+
+
+this.Button07_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.grd_sample.setCellProperty("body",1, 'sortcolumn',"cyon")
+};
+
+
+this.Button10_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.grd_sample.setCellProperty("head",5, 'filtercolumn',null)
+};
+
+this.Button11_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.grd_sample.setCellProperty("head",5, 'filtercolumn','col5')
+};
+
+this.Button20_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.grd_sample.setCellProperty("head",1, 'filtertype',null)
+	g_filtertype = 'condition'
+};
+
+var g_filtertype = 'condition'
+this.Button21_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.grd_sample.setCellProperty("head",1, 'filtertype',g_filtertype)
+	if (g_filtertype == 'condition')
+		g_filtertype = 'select'
+	else
+		g_filtertype = 'condition'
+};
+
+this.Button37_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.transaction("svcSelectCode"
+	                ,data_url
+					,""
+					,"ds_sample=out_dept"
+					,""
+					,"fn_callback");	
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.grd_sample.setCellProperty("head",4, 'sortcolumn',null)
+};
+
+this.Button0800_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	trace("keystring: "+this.ds_sample.keystring)
+	trace("filterstr: "+this.ds_sample.filterstr)
+};
+]]></Script>
+  </Form>
+</FDL>

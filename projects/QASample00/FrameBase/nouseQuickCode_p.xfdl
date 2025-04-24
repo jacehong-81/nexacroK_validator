@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="nouseQuickCode_p" width="800" height="450" titletext="New Form">
+    <Layouts>
+      <Layout height="450" width="800">
+        <Static id="stBUSINESS_LICENSE_NUM_Label" left="10" top="10" width="100" height="41" text="사업자등록번호" cssclass="sta_labelbox" taborder="0"/>
+        <Edit id="edtBUSINESS_LICENSE_NUM" left="115" top="15" width="280" height="30" taborder="1"/>
+        <Static id="stCORPORATE_NAME_Label" left="400" top="10" width="100" height="41" text="상호명" cssclass="sta_labelbox" taborder="2"/>
+        <Edit id="edtCORPORATE_NAME" left="505" top="15" width="280" height="30" taborder="3"/>
+        <Static id="stCOMPANY_NAME_Label" left="10" top="50" width="100" height="41" text="회사명" cssclass="sta_labelbox" taborder="4"/>
+        <Edit id="edtCOMPANY_NAME" left="115" top="55" width="280" height="30" taborder="5"/>
+        <Static id="stCONDITION_VALUE_Label" left="400" top="50" width="100" height="41" text="업태" cssclass="sta_labelbox" taborder="6"/>
+        <Edit id="edtCONDITION_VALUE" left="505" top="55" width="280" height="30" taborder="7"/>
+        <Static id="stREPRESENTATIVE_NAME_Label" left="10" top="90" width="100" height="41" text="대표자" cssclass="sta_labelbox" taborder="8"/>
+        <Edit id="edtREPRESENTATIVE_NAME" left="115" top="95" width="280" height="30" taborder="9"/>
+        <Static id="stBUSINESS_TYPE_Label" left="400" top="90" width="100" height="41" text="업종" cssclass="sta_labelbox" taborder="10"/>
+        <Edit id="edtBUSINESS_TYPE" left="505" top="95" width="280" height="30" taborder="11"/>
+        <Static id="stREPRESENTATIVE_SOCIAL_NUM_Label" left="10" top="130" width="100" height="41" text="주민등록번호" cssclass="sta_labelbox" taborder="12"/>
+        <Edit id="edtREPRESENTATIVE_SOCIAL_NUM" left="115" top="135" width="280" height="30" taborder="13"/>
+        <Static id="stCORPORATE_AREA_Label" left="400" top="130" width="100" height="41" text="지역" cssclass="sta_labelbox" taborder="14"/>
+        <Edit id="edtCORPORATE_AREA" left="505" top="135" width="280" height="30" taborder="15"/>
+        <Static id="stCORPORATE_TELNUM_Label" left="10" top="170" width="100" height="41" text="전화번호" cssclass="sta_labelbox" taborder="16"/>
+        <Edit id="edtCORPORATE_TELNUM" left="115" top="175" width="280" height="30" taborder="17"/>
+        <Static id="stCORPORATE_FAXNUM_Label" left="400" top="170" width="100" height="41" text="팩스번호" cssclass="sta_labelbox" taborder="18"/>
+        <Edit id="edtCORPORATE_FAXNUM" left="505" top="175" width="280" height="30" taborder="19"/>
+        <Static id="stCORPORATE_EMAIL_Label" left="10" top="210" width="100" height="41" text="이메일" cssclass="sta_labelbox" taborder="20"/>
+        <Edit id="edtCORPORATE_EMAIL" left="115" top="215" width="280" height="30" taborder="21"/>
+        <Static id="stCORPORATE_HOMEPAGE_Label" left="400" top="210" width="100" height="41" text="홈페이지" cssclass="sta_labelbox" taborder="22"/>
+        <Edit id="edtCORPORATE_HOMEPAGE" left="505" top="215" width="280" height="30" taborder="23"/>
+        <Static id="stCORPORATE_POSTAL_CODE_Label" left="10" top="250" width="100" height="111" text="우편번호" cssclass="sta_labelbox" taborder="24"/>
+        <Edit id="edtCORPORATE_POSTAL_CODE" left="115" top="255" width="190" height="30" taborder="25"/>
+        <Button id="btnCORPORATE_POSTAL_CODE_BTN" left="310" top="255" width="70" height="30" text="우편번호" taborder="26"/>
+        <Edit id="edtCORPORATE_ADRESS1" left="115" top="290" width="280" height="30" taborder="27"/>
+        <Edit id="edtCORPORATE_ADRESS2" left="115" top="325" width="280" height="30" taborder="28"/>
+        <Static id="stCOMPANY_SEAL_Label" left="400" top="250" width="100" height="150" text="직인" cssclass="sta_labelbox" taborder="29"/>
+        <Edit id="edtCOMPANY_SEAL" left="505" top="255" width="280" height="100" taborder="30"/>
+        <Button id="btnCOMPANY_SEAL_BTN" left="505" top="360" width="280" height="30" text="직인선택" taborder="31"/>
+        <Static id="stMEMO_Label" left="10" top="360" width="100" height="40" text="메모" cssclass="sta_labelbox" taborder="32"/>
+        <Edit id="edtMEMO" left="115" top="365" width="280" height="30" taborder="33"/>
+        <Button id="btnok" left="317" top="410" width="80" height="30" text="확인" cssclass="btn_cm_basic02" taborder="34" onclick="btnok_onclick"/>
+        <Button id="btncancel" left="402" top="410" width="80" height="30" text="취소" cssclass="btn_cm_basic01" taborder="35"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsDetail">
+        <ColumnInfo>
+          <Column id="BUSINESS_LICENSE_NUM" type="STRING" size="80"/>
+          <Column id="CORPORATE_NAME" type="STRING" size="80"/>
+          <Column id="COMPANY_NAME" type="STRING" size="80"/>
+          <Column id="CONDITION_VALUE" type="STRING" size="80"/>
+          <Column id="REPRESENTATIVE_NAME" type="STRING" size="80"/>
+          <Column id="BUSINESS_TYPE" type="STRING" size="80"/>
+          <Column id="REPRESENTATIVE_SOCIAL_NUM" type="STRING" size="80"/>
+          <Column id="CORPORATE_AREA" type="STRING" size="80"/>
+          <Column id="CORPORATE_TELNUM" type="STRING" size="80"/>
+          <Column id="CORPORATE_FAXNUM" type="STRING" size="80"/>
+          <Column id="CORPORATE_EMAIL" type="STRING" size="80"/>
+          <Column id="CORPORATE_HOMEPAGE" type="STRING" size="80"/>
+          <Column id="CORPORATE_POSTAL_CODE" type="STRING" size="80"/>
+          <Column id="CORPORATE_ADRESS1" type="STRING" size="80"/>
+          <Column id="CORPORATE_ADRESS2" type="STRING" size="80"/>
+          <Column id="MEMO" type="STRING" size="80"/>
+          <Column id="CORPORATE_POSTAL_CODE_BTN" type="STRING" size="80"/>
+          <Column id="COMPANY_SEAL" type="STRING" size="80"/>
+          <Column id="COMPANY_SEAL_BTN" type="STRING" size="80"/>
+        </ColumnInfo>
+        <Rows>
+          <Row/>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="edtBUSINESS_LICENSE_NUM" propid="value" datasetid="dsDetail" columnid="BUSINESS_LICENSE_NUM"/>
+      <BindItem id="item1" compid="edtCORPORATE_NAME" propid="value" datasetid="dsDetail" columnid="CORPORATE_NAME"/>
+      <BindItem id="item2" compid="edtCOMPANY_NAME" propid="value" datasetid="dsDetail" columnid="COMPANY_NAME"/>
+      <BindItem id="item3" compid="edtCONDITION_VALUE" propid="value" datasetid="dsDetail" columnid="CONDITION_VALUE"/>
+      <BindItem id="item4" compid="edtREPRESENTATIVE_NAME" propid="value" datasetid="dsDetail" columnid="REPRESENTATIVE_NAME"/>
+      <BindItem id="item5" compid="edtBUSINESS_TYPE" propid="value" datasetid="dsDetail" columnid="BUSINESS_TYPE"/>
+      <BindItem id="item6" compid="edtREPRESENTATIVE_SOCIAL_NUM" propid="value" datasetid="dsDetail" columnid="REPRESENTATIVE_SOCIAL_NUM"/>
+      <BindItem id="item7" compid="edtCORPORATE_AREA" propid="value" datasetid="dsDetail" columnid="CORPORATE_AREA"/>
+      <BindItem id="item8" compid="edtCORPORATE_TELNUM" propid="value" datasetid="dsDetail" columnid="CORPORATE_TELNUM"/>
+      <BindItem id="item9" compid="edtCORPORATE_FAXNUM" propid="value" datasetid="dsDetail" columnid="CORPORATE_FAXNUM"/>
+      <BindItem id="item10" compid="edtCORPORATE_EMAIL" propid="value" datasetid="dsDetail" columnid="CORPORATE_EMAIL"/>
+      <BindItem id="item11" compid="edtCORPORATE_HOMEPAGE" propid="value" datasetid="dsDetail" columnid="CORPORATE_HOMEPAGE"/>
+      <BindItem id="item12" compid="edtCORPORATE_POSTAL_CODE" propid="value" datasetid="dsDetail" columnid="CORPORATE_POSTAL_CODE"/>
+      <BindItem id="item13" compid="edtCORPORATE_ADRESS1" propid="value" datasetid="dsDetail" columnid="CORPORATE_ADRESS1"/>
+      <BindItem id="item14" compid="edtCORPORATE_ADRESS2" propid="value" datasetid="dsDetail" columnid="CORPORATE_ADRESS2"/>
+      <BindItem id="item15" compid="edtCOMPANY_SEAL" propid="value" datasetid="dsDetail" columnid="COMPANY_SEAL"/>
+      <BindItem id="item16" compid="edtMEMO" propid="value" datasetid="dsDetail" columnid="MEMO"/>
+    </Bind>
+    <Script type="xscript5.1"><![CDATA[
+this.btnok_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+]]></Script>
+  </Form>
+</FDL>

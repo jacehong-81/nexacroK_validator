@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Work" width="1280" height="720" titletext="Form_Work" scrolltype="both" scrollbartype="auto" onactivate="Form_Work_onactivate" onload="Form_Work_onload" onmove="Form_Work_onmove" border="1px solid black">
+    <Layouts>
+      <Layout width="1280" height="720" screenid="Desktop_screen">
+        <Button id="Button00" taborder="0" text="Button00" left="20" top="20" width="120" height="50" onclick="Button00_onclick"/>
+        <Edit id="Edit00" taborder="1" left="20" top="90" width="140" height="20"/>
+        <TextArea id="TextArea00" taborder="2" left="20" top="120" width="220" height="130"/>
+        <Combo id="Combo00" taborder="3" text="Combo00" left="690" top="376" width="150" height="20" type="search" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">12</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">121</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">4</Col>
+                <Col id="datacolumn">21212</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">2121212</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">6</Col>
+                <Col id="datacolumn">212121212</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Button id="Button01" taborder="4" text="Button01" left="170.00" top="20" width="120" height="50" onclick="Button01_onclick"/>
+        <Button id="Button02" taborder="5" text="Button02" left="328" top="20" width="112" height="49" onclick="Button02_onclick"/>
+        <Button id="Button03" taborder="6" text="Button03" left="280" top="137" width="127" height="78" onclick="Button03_onclick" ondblclick="Button03_ondblclick"/>
+        <Button id="Button04" taborder="7" text="Button04" left="267" top="341" width="159" height="90" onclick="Button04_onclick"/>
+        <Button id="Button05" taborder="8" text="Button05" left="80" top="282" width="77" height="55" onclick="Button05_onclick"/>
+        <Button id="Button06" taborder="9" text="TestClass" left="147" top="487" width="454" height="53" onclick="Button06_onclick"/>
+        <Button id="Button07" taborder="10" text="Button07" left="506" top="134" width="154" height="102" onclick="Button07_onclick"/>
+        <TextArea id="TextArea01" taborder="11" left="706" top="40" width="94" height="100" value="fkdl fkdf 'f &#10;jdklsjd;ksd;&#10;dsld;kls'dk'lsd&#10;dklsdk'lsdk'sldk'lsd&#10;dkjls;dkl'sdk'sl&#10;djsk;dks;d&#10;djlskdsl'dk&#10;dkjlsdks'ld"/>
+        <ListBox id="ListBox00" taborder="12" left="724" top="195" width="236" height="156" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">a</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">b</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">c</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">4</Col>
+                <Col id="datacolumn">d</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">e</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">6</Col>
+                <Col id="datacolumn">f</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">7</Col>
+                <Col id="datacolumn">g</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">8</Col>
+                <Col id="datacolumn">h</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">9</Col>
+                <Col id="datacolumn">i</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">10</Col>
+                <Col id="datacolumn">j</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">11</Col>
+                <Col id="datacolumn">k</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </ListBox>
+        <Div id="Div00" taborder="13" text="Div00" left="933" top="47" width="167" height="129" border="1px solid black">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="Button00" left="40" top="42" width="33" height="32"/>
+            </Layout>
+            <Layout name="screen00"/>
+            <Layout name="screen01"/>
+          </Layouts>
+        </Div>
+        <Static id="Static00" taborder="14" text="Static00" left="502" top="242" width="178" height="122"/>
+        <WebView id="WebView00" taborder="15" left="-42" top="196" width="100" height="100"/>
+        <Button id="Button08" taborder="16" text="Button08" left="740" top="616" width="87" height="55" onclick="Button08_onclick"/>
+        <Button id="Button09" taborder="17" text="Button09" left="870" top="580" width="349" height="93" onclick="Button09_onclick"/>
+        <Button id="Button10" taborder="18" text="Button10" left="475" top="24" width="112" height="36" onclick="Button10_onclick"/>
+        <Button id="Button11" taborder="19" text="Button11" left="281" top="261" width="145" height="59" onclick="Button11_onclick"/>
+        <Calendar id="Calendar00" taborder="20" left="490" top="362" width="143" height="34"/>
+        <Button id="Button12" taborder="21" text="Button12" left="101" top="362" width="63" height="48" onclick="Button12_onclick"/>
+        <Button id="Button13" taborder="22" text="Button13" left="950" top="391" width="94" height="39" onclick="Button13_onclick"/>
+        <FileUpload id="FileUpload00" taborder="23" left="1062" top="242" width="58" height="59"/>
+        <FileDownload id="FileDownload00" taborder="24" text="FileDownload00" left="1193" top="91" width="47" height="61"/>
+        <WebView id="WebView01" taborder="25" left="1012" top="290" width="200" height="72"/>
+        <Calendar id="Calendar00_00" taborder="26" left="489" top="430" width="143" height="34" popuptype="center"/>
+        <Combo id="Combo00_00" taborder="27" text="Combo00" left="695" top="447" width="150" height="20" type="search" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" popuptype="center">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">12</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">121</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">4</Col>
+                <Col id="datacolumn">21212</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">2121212</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">6</Col>
+                <Col id="datacolumn">212121212</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Button id="Button14" taborder="28" text="Button14" left="695" top="495" width="49" height="30" onclick="Button14_onclick"/>
+        <Button id="Button14_00" taborder="29" text="Button14" left="786" top="495" width="49" height="30" onclick="Button14_00_onclick"/>
+        <Button id="Button15" taborder="30" text="Button15" left="35" top="560" width="290" height="150" onclick="Button15_onclick"/>
+        <Button id="Button15_00" taborder="31" text="Button15" left="353" top="560" width="290" height="150" onclick="Button16_onclick"/>
+      </Layout>
+      <Layout name="screen00" width="1280" height="720" screenid=""/>
+      <Layout name="screen01" width="1280" height="720" screenid=""/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.open("modaless","base1::test_popup.xfdl",this.getOwnerFrame(),{},"showstatusbar=false showtitlebar=true", 50,50);
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// Create Object  
+	var oChild = new ChildFrame();  
+	oChild.init("ChildFrame", 0, 0, 196, 46, null, null);
+	
+	oChild.set_formurl("base1::test_popup.xfdl");
+	 
+	// Add Object to Parent Frame  
+	
+	
+	
+	
+	oChild.showModal(this);
+	
+};
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.getApplication().Dataset0.addColumn("aa","STRING",8)
+};
+
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	console.log(nexacro.getApplication().Dataset0._p_colinfos);
+
+	//nexacro.Application
+};
+
+this.Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	//console.log(nexacro.getApplication()["what"]);
+	console.log(nexacro.getApplication().mainframe._isMainFrameBody());
+	
+	var is00_ = nexacro.getApplication().mainframe._isMainFrame();
+	var is01_ = nexacro.getApplication().mainframe._isMainForm();
+	var is02_ = nexacro.getApplication().mainframe._isMain();
+	var is03_ = this._isMainFrame();
+	var is04_ = this._isMainForm();
+	var is05_ = this._isMain();
+	
+	console.log("mainframe",is00_,is01_,is02_);
+	console.log("form",is03_,is04_,is05_);
+	
+};
+
+this.Button05_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.getApplication().addVariable("what1",new Date())
+};
+
+
+
+this.Button06_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var obj = new TestClass()
+	console.log(obj)
+};
+
+this.Form_Work_onactivate = function(obj:nexacro.Form,e:nexacro.ActivateEventInfo)
+{
+	console.log("들어와???")
+};
+
+this.DateField00_onchanged = function(obj:nexacro.DateField,e:nexacro.ChangeEventInfo)
+{
+	
+};
+
+this.Button07_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	//this.confirm("hehe")
+	
+	var app = nexacro.getApplication();
+	console.log(app);
+	var main = nexacro.getMainObject();
+	console.log(main);
+	
+	var af = nexacro.getActiveForm();
+	console.log(af);
+	var afr = nexacro.getActiveFrame();
+	console.log(afr)
+};
+
+this.Form_Work_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var objButton = new Button("Button", 30, 120, 196, 46, null, null);
+
+ 
+	// Add Object to Parent Form  
+	this.addChild("Button", objButton); 
+	 
+	objButton.show(); 
+
+};
+
+this.WebView01_onusernotify = function(obj:nexacro.WebView,e:nexacro.WebUserNotifyEventInfo)
+{
+	
+};
+
+this.Form_Work_onmove = function(obj:nexacro.Form,e:nexacro.MoveEventInfo)
+{
+	console.log("move~~")
+		console.log(e)
+};
+
+this.Button08_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var ed = "http://172.10.12.81:8080/mfe_test/index_mfe.html"
+	this.WebView01.enable = false;
+};
+
+this.mycallback = function()
+{
+}
+this.Button09_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.WebView01.addEventHandler("click",this.mycallback)
+	var win1 = nexacro._getMainWindowHandle();
+	var win2 = nexacro._getRootWindowHandle();
+	if(win1 == win2)
+	{
+		this.alert("same~")
+	}
+	else
+	{
+		this.alert("not~");
+	}
+};
+
+this.Button10_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+
+};
+
+this.WebView01_onsize = function(obj:nexacro.WebView,e:nexacro.SizeEventInfo)
+{
+	
+};
+
+this.WebView01_onmove = function(obj:nexacro.WebView,e:nexacro.MoveEventInfo)
+{
+	
+};
+
+this.WebView01_onloadcompleted = function(obj:nexacro.WebView,e:nexacro.WebLoadCompEventInfo)
+{
+	
+};
+
+this.WebView01_ondevicebuttonup = function(obj:nexacro.WebView,e:nexacro.DeviceButtonEventInfo)
+{
+	
+};
+
+this.Button11_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.loadStyle( "xcssrc::teststyle.xcss");
+};
+
+this.Button12_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var app = this._getApplication();
+	console.log(String(app.setIconWidget))
+};
+
+this.Button13_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.Button14_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.getApplication().mainframe._waitCursor(true);
+	
+};
+
+this.Button14_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.getApplication().mainframe._waitCursor(false);
+};
+
+this.Button15_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// Sanitizer 테스트
+	
+		var env = nexacro.getEnvironment();
+		env.usesanitizer = true;
+		
+		env.allowtags = env.allowtags + ",script,iframe";
+		env.blocktags = "img";
+		env.allowattributes = env.allowattributes + ",onerror,onload,g,src ,allow, allowfullscreen, frameborder, scrolling";
+		console.log(nexacro._sanitize('<img src=x onerror=alert(1)//>')); 
+		console.log(nexacro._sanitize('<svg><g/onload=alert(2)//<p>')); 
+		console.log(nexacro._sanitize('<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" scrolling="no" src="https://www.youtube.com/embed/vJG698U2Mvo" width="560"></iframe>'));
+		console.log(nexacro._sanitize('<TABLE><tr><td>HELLO</tr></TABL>')); 
+		console.log(nexacro._sanitize('<UL><li><A HREF=//google.com>click</UL>')); 
+
+		console.log()
+		
+		
+		
+	
+};
+this.modulecallback = function(dayjsutil,dayjs)
+{
+}
+this.Button16_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var env = nexacro.getEnvironment();
+		
+    //
+	(async ()=>
+	{
+		
+		
+		
+			var ret = nexacro.loadExternalStyle("skeleton").then((val)=>
+			{
+				console.log(val);
+			});
+		
+		
+		
+		
+		var daymodule = nexacro.loadExternalModule("dayjs").then((val)=>
+		{
+			console.log(val)
+			const dateUtils = new val();
+			const now = dateUtils.dayjs();
+			const formattedDate = dateUtils.format(now, 'YYYY-MM-DD HH:mm:ss');
+			console.log(formattedDate)
+		});
+		
+		var jquery = nexacro.loadExternalJS("jquery").then((val)=>
+		{
+			const $ = val.$;
+			
+			console.log(val);
+			
+		});
+		
+		var tr_s = nexacro.loadHTMLTemplate("templateR").then((val)=>
+		{
+			console.log(val);
+		});
+	})();
+/* https://github.com/dmtrKovalenko/date-io*/
+//'https://cdn.jsdelivr.net/npm/@date-io/dayjs@3.2.0/+esm'
+//https://www.jsdelivr.com/package/npm/@date-io/dayjs
+/*
+import LuxonAdapter from "@date-io/luxon";
+import DateFnsAdapter from "@date-io/date-fns";
+
+const dateFns = new DateFnsAdapter();
+const luxon = new LuxonAdapter({ locale: "fr" }); // pass french locale
+
+const initialLuxonDate = luxon.date("2018-10-28T11:44:00.000Z");
+const initialDateFnsDate = dateFns.date("2018-10-28T11:44:00.000Z");
+
+const updatedLuxonDate = luxon.addDays(initialLuxonDate, 2);
+const updatedDateFnsDate = dateFns.addDays(initialDateFnsDate, 2);
+
+luxon.format(updatedLuxonDate, "fullDateTime24h"); // "2018, octobre 30 11:44"
+dateFns.format(updatedLuxonDate, "fullDateTime24h"); // "2018, October 30th 11:44"
+*/
+//https://cdn.jsdelivr.net/npm/skeleton-css@2.0.4/css/skeleton.min.css
+//https://cdn.jsdelivr.net/npm/simplegrid@1.0.2/+esm
+/*<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>*/
+	
+};
+]]></Script>
+    <Objects>
+      <Phone id="Phone00"/>
+    </Objects>
+  </Form>
+</FDL>
