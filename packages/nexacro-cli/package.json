@@ -1,6 +1,20 @@
 {
   "name": "nexacro-cli",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "version": "0.0.1",
+  "description": "A modular library for creating CLI-based developer tools and plugins usable within Nexacro projects.",
+  "author": "TOBESOFT.Co.,Ltd.",
+  "homepage": "https://www.tobesoft.com",
+  "license": "SEE LICENSE IN tobesoft-nexacro-license.html",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://tfs2.tobesoft.com:9443/tfs/XPLATFORM/KAINOS/_git/KAINOS"
+  },
 }

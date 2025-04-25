@@ -384,13 +384,13 @@ export function TSBuildConfig(option = {})
                 }),
                 resolve({
                     // browser 용인지 nodejs 우선인지에 따라 아래 두개 수정
-                    browser: false, preferBuiltins: true, dedupe: ["nexacro-parser-core",
-                        "nexacro-linter",
-                        "prototype-linter",
+                    browser: false, preferBuiltins: true, dedupe: [//"nexacro-parser-core",
+                        //"nexacro-linter",
+                        //"prototype-linter",
                         "nexacro-cli",
-                        "nexacro-pack-lagacy",
-                        "nexacro-extension-vscode",
-                        "nexacro-extension-theia"
+                        //"nexacro-pack-lagacy",
+                        //"nexacro-extension-vscode",
+                        //"nexacro-extension-theia"
                     ]
                 }),
                 commonjs({
