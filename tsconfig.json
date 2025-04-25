@@ -1,0 +1,31 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    //"rootDir": "./plugin",
+    //"outDir": "./plugin/dist",
+    "strictPropertyInitialization": false,
+    "sourceMap": true,
+    "declaration": true,
+    //"declarationDir": "./plugin/types",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useDefineForClassFields": false,
+    "allowJs": true,
+    "checkJs": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+      "esnext.decorators"
+    ]
+  },
+  "exclude": [
+    "*.config.*",
+    "dist",
+    "node_modules"
+  ],
+  "include": [
+    "plugin/**/*"
+  ]
+}

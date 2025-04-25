@@ -1,0 +1,14 @@
+[local]
+.gitignore
+
+[relative]
+packages/**/.gitignore
+
+[inline]
+package.json
+package-lock.json
+packages/**/tsconfig.json
+packages/**/*-license.html
+packages/**/*.config.*
+
+
