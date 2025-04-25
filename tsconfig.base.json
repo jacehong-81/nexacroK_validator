@@ -7,7 +7,7 @@
       "ES2022",
       "DOM",
       "DOM.Iterable",
-      "esnext.decorators"
+      //"esnext.decorators"
     ],
     "types": [
       "node"

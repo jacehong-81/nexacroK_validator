@@ -7,7 +7,7 @@
             "ESNext",
             "DOM",
             "DOM.Iterable",
-            "esnext.decorators"
+            //"esnext.decorators"
         ],
         "moduleResolution": "node",
         "esModuleInterop": true,

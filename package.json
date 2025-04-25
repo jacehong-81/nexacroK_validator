@@ -38,11 +38,9 @@
     "ignore-sync": "^7.0.1",
     "lerna": "^8.1.2",
     "lint-staged": "^15.2.2",
-    "lodash": "^4.17.21",
     "madge": "^7.0.0",
     "pm2": "^6.0.5",
     "prettier": "^3.2.5",
-    "reflect-metadata": "^0.2.2",
     "rimraf": "^5.0.5",
     "rollup": "^4.18.0",
     "rollup-plugin-delete": "^2.0.0",
@@ -60,8 +58,7 @@
     "tslib": "^2.6.2",
     "tsuml2": "^0.17.0",
     "tsx": "^4.15.1",
-    "typescript": "^5.4.5",
-    "vm2": "^3.9.19"
+    "typescript": "^5.4.5"
   },
   "scripts": {
     "dev:test": "tsx --tsconfig ./tsconfig.prebuild.json ./test/index.js",
@@ -93,5 +90,11 @@
     "string-width": "^4.2.0",
     "wrap-ansi": "^7.0.0"
   },
-  "packageManager": "yarn@1.22.1"
+  "packageManager": "yarn@1.22.1",
+  "dependencies": {
+    "typedi": "^0.10.0",
+    "vm2": "^3.9.19",
+    "reflect-metadata": "^0.2.2",
+    "lodash": "^4.17.21"
+  }
 }

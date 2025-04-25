@@ -15,6 +15,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://tfs2.tobesoft.com:9443/tfs/XPLATFORM/KAINOS/_git/KAINOS"
+    "url": "https://github.com/jacehong-81/nexacroK_validator"
   },
+  "scripts": {
+    "build": "yarn build:rollup",
+    "build:rollup": "rollup -c",
+    "build:docs": "rollup -c --docs all",
+    "build-doc": "yarn build:docs",
+    "dev": "yarn -s dev:rollup",
+    "dev:rollup": "rollup -c -w",
+    "clean": "rimraf .rollup.cache && rimraf .rollup.tscache && yarn -s compile:clean && rimraf ./dist && rimraf ./types",
+    "compile": "yarn -s compile:clean && yarn -s compile:tsc",
+    "compile:clean": "rimraf tsconfig.tsbuildinfo && tsc -b --clean",
+    "compile:tsc": "tsc -b"
+  },
+  "type": "module",
+  "typings": "./dist/index.d.ts",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "enquirer": "^2.4.1",
+    "fast-glob": "^3.3.3",
+    "jsonrpc-lite": "^2.2.0",
+    "ora": "^8.2.0"
+  }
 }
