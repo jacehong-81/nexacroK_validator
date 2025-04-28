@@ -31,7 +31,6 @@
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.6",
-    "fs-extra": "^11.2.0",
     "glob": "^10.3.10",
     "globals": "^16.0.0",
     "husky": "^9.0.11",
@@ -92,9 +91,11 @@
   },
   "packageManager": "yarn@1.22.1",
   "dependencies": {
-    "typedi": "^0.10.0",
-    "vm2": "^3.9.19",
+    "awilix": "^12.0.5",
+    "fs-extra": "^11.3.0",
+    "lodash": "^4.17.21",
     "reflect-metadata": "^0.2.2",
-    "lodash": "^4.17.21"
+    "typedi": "^0.10.0",
+    "vm2": "^3.9.19"
   }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "nexacro-cli",
+  "name": "nexacro-parser-core",
   "version": "0.0.1",
-  "description": "A modular library for creating CLI-based developer tools and plugins usable within Nexacro projects.",
+  "description": "A module for analyzing developer files in Nexacro projects.",
   "author": "TOBESOFT.Co.,Ltd.",
   "homepage": "https://www.tobesoft.com",
   "license": "SEE LICENSE IN tobesoft-nexacro-license.html",
@@ -31,12 +31,5 @@
   },
   "type": "module",
   "typings": "./dist/index.d.ts",
-  "dependencies": {
-    "chalk": "^5.4.1",
-    "cli-table3": "^0.6.5",
-    "enquirer": "^2.4.1",
-    "fast-glob": "^3.3.3",
-    "ora": "^8.2.0",
-    "vscode-jsonrpc": "^8.2.1"
-  }
+  "dependencies": {}
 }

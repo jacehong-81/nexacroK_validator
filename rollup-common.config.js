@@ -388,7 +388,7 @@ export function TSBuildConfig(option = {})
                         //"nexacro-linter",
                         //"prototype-linter",
                         "nexacro-cli",
-                        //"nexacro-pack-lagacy",
+                        //"nexacro-pack-legacy",
                         //"nexacro-extension-vscode",
                         //"nexacro-extension-theia"
                     ]
