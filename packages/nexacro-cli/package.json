@@ -18,15 +18,12 @@
     "url": "https://github.com/jacehong-81/nexacroK_validator"
   },
   "scripts": {
-    "build": "yarn build:rollup",
-    "build:rollup": "rollup -c",
-    "build:docs": "rollup -c --docs all",
-    "build-doc": "yarn build:docs",
-    "dev": "yarn -s dev:rollup",
-    "dev:rollup": "rollup -c -w",
-    "clean": "rimraf .rollup.cache && rimraf .rollup.tscache && yarn -s compile:clean && rimraf ./dist && rimraf ./types",
-    "compile": "yarn -s compile:clean && yarn -s compile:tsc",
-    "compile:clean": "rimraf tsconfig.tsbuildinfo && tsc -b --clean",
+    "build": "rollup -c",
+    "build-docs": "rollup -c --docs all",
+    "dev": "rollup -c -w",
+    "clean": "rimraf .rollup.cache .rollup.tscache dist types docs && pnpm run compile:clean",
+    "compile": "pnpm run compile:clean && pnpm run compile:tsc",
+    "compile:clean": "tsc -b --clean",
     "compile:tsc": "tsc -b"
   },
   "type": "module",

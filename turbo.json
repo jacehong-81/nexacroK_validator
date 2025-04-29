@@ -1,0 +1,275 @@
+{
+    "$schema": "https://turborepo.org/schema.json",
+    "globalDependencies": [],
+    "globalEnv": [
+        "NODE_ENV"
+    ],
+    "tasks": {
+        "build": {
+            "dependsOn": [
+                "^build"
+            ],
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean": {
+            "cache": false
+        },
+        "build-chain": {
+            "dependsOn": [
+                "build-parser-core",
+                "build-linter",
+                "build-cli",
+                "build-extension-theia",
+                "build-extension-vscode",
+                "build-pack-legacy",
+                "build-prototype-linter"
+            ],
+            "outputs": []
+        },
+        "dev-chain": {
+            "dependsOn": [
+                "dev-parser-core",
+                "dev-linter",
+                "dev-cli",
+                "dev-extension-theia",
+                "dev-extension-vscode",
+                "dev-pack-legacy",
+                "dev-prototype-linter"
+            ],
+            "cache": false,
+            "persistent": true
+        },
+        "clean-chain": {
+            "dependsOn": [
+                "clean-parser-core",
+                "clean-linter",
+                "clean-cli",
+                "clean-extension-theia",
+                "clean-extension-vscode",
+                "clean-pack-legacy",
+                "clean-prototype-linter"
+            ],
+            "cache": false
+        },
+        "build-parser-core": {
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev-parser-core": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean-parser-core": {
+            "cache": false
+        },
+        "build-linter": {
+            "dependsOn": [
+                "nexacro-parser-core#build"
+            ],
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev-linter": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean-linter": {
+            "cache": false
+        },
+        "build-cli": {
+            "dependsOn": [
+                "nexacro-linter#build"
+            ],
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev-cli": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean-cli": {
+            "cache": false
+        },
+        "build-extension-theia": {
+            "dependsOn": [
+                "nexacro-theia-linter#build",
+                "nexacro-theia-sample#build"
+            ],
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": []
+        },
+        "dev-extension-theia": {
+            "dependsOn": [
+                "dev-nexacro-theia-linter",
+                "dev-nexacro-theia-sample"
+            ],
+            "cache": false,
+            "persistent": true
+        },
+        "clean-extension-theia": {
+            "dependsOn": [
+                "clean-nexacro-theia-linter",
+                "clean-nexacro-theia-sample"
+            ],
+            "cache": false
+        },
+        "build-extension-vscode": {
+            "dependsOn": [
+                "nexacro-vscode-linter#build",
+                "nexacro-vscode-sample#build"
+            ],
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": []
+        },
+        "dev-extension-vscode": {
+            "dependsOn": [
+                "dev-nexacro-vscode-linter",
+                "dev-nexacro-vscode-sample"
+            ],
+            "cache": false,
+            "persistent": true
+        },
+        "clean-extension-vscode": {
+            "dependsOn": [
+                "clean-nexacro-vscode-linter",
+                "clean-nexacro-vscode-sample"
+            ],
+            "cache": false
+        },
+        "build-nexacro-theia-linter": {
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev-nexacro-theia-linter": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean-nexacro-theia-linter": {
+            "cache": false
+        },
+        "build-nexacro-theia-sample": {
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev-nexacro-theia-sample": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean-nexacro-theia-sample": {
+            "cache": false
+        },
+        "build-nexacro-vscode-linter": {
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev-nexacro-vscode-linter": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean-nexacro-vscode-linter": {
+            "cache": false
+        },
+        "build-nexacro-vscode-sample": {
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev-nexacro-vscode-sample": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean-nexacro-vscode-sample": {
+            "cache": false
+        },
+        "build-pack-legacy": {
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev-pack-legacy": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean-pack-legacy": {
+            "cache": false
+        },
+        "build-prototype-linter": {
+            "outputs": [
+                "dist/**"
+            ],
+            "inputs": [
+                "src/**",
+                "package.json",
+                "tsconfig.json"
+            ]
+        },
+        "dev-prototype-linter": {
+            "cache": false,
+            "persistent": true
+        },
+        "clean-prototype-linter": {
+            "cache": false
+        }
+    }
+}

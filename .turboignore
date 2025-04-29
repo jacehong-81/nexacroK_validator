@@ -1,0 +1,35 @@
+# 기본 무시 항목
+node_modules/
+.rollup.cache/
+.rollup.tscache/
+*.tsbuildinfo
+.DS_Store
+.vscode/
+plugin/dist/
+plugin/types/
+plugin/metadata/
+docs/
+projects/
+packages/**/docs/
+packages/**/dist/
+packages/**/types/
+packages/**/node_modules/
+packages/**/.rollup.cache/
+packages/**/.rollup.tscache/
+packages/**/tsconfig.tsbuildinfo
+packages/**/*-license.html
+packages/**/*.config.*
+
+# 특정 패키지 무시 - 임시 개발용 (전체 빌드에 영향을 주지 않기 위해 추가하고 작업)
+packages/nexacro-extension-theia/
+packages/nexacro-extension-vscode/
+packages/prototype-linter/
+
+# output 무시
+dist/
+types/
+
+# 캐시 및 빌드 산출물 무시
+*.html
+*.config.*
+*.license.html

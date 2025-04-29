@@ -21,7 +21,7 @@ const get_script_files = () =>
 }
 
 export default TSBuildConfig({
-    packages: "nexacro-linter",
+    packages: "nexacro-parser-core",
     sourceDir: 'src',
     moduleUrl: import.meta.url,
     entries: get_script_files(),

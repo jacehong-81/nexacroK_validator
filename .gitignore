@@ -9,3 +9,6 @@ plugin/types/
 plugin/metadata/
 docs/
 projects/
+
+dist/
+types/
