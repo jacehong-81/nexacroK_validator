@@ -13,8 +13,15 @@ import { execSync } from 'child_process';
 import madge from 'madge';
 import * as fs from 'fs';
 
+
+
 import { createDiagram, TsUML2Settings } from 'tsuml2'
 import { parse } from 'svg-parser'
+import fsExtra from 'fs-extra';
+const { readFile, writeFile } = fsExtra;
+import { Module, render } from 'viz.js/full.render.js'; // 여기 수정
+import Viz from 'viz.js';
+import { execa } from 'execa';
 
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -23,6 +30,74 @@ const __filename = fileURLToPath(import.meta.url);
 
 const args = process.argv.slice(2);
 const doc = args.includes('--docs') ? args[args.indexOf('--docs') + 1] : 'none';
+
+
+function convertGraphToDot(graph) 
+{
+    const nodes = Object.keys(graph.nodes || {});
+    const edges = graph.edges || [];
+
+    let dot = 'digraph G {\n';
+
+    for (const node of nodes) 
+    {
+        dot += `  "${node}";\n`;
+    }
+
+    for (const edge of edges) 
+    {
+        dot += `  "${edge.from}" -> "${edge.to}";\n`;
+    }
+
+    dot += '}\n';
+    return dot;
+}
+
+function generateGraphPlugin(options = {}) 
+{
+    return;
+
+    // graph 옵션 추가 필요
+
+    const {
+        graphJsonPath = 'graph.json',
+        svgOutputPath = 'graph.svg',
+    } = options;
+
+    return {
+        name: 'generate-graph',
+
+        async writeBundle() 
+        {
+            /*  eslint-disable no-console */
+            console.log('⚡ 터보 그래프 생성 중...');
+
+            // 1. turbo run build --graph=graph.json
+            await execa('turbo', ['run', 'build', '--graph=' + graphJsonPath], {
+                stdio: 'inherit',
+            });
+
+            console.log('✅ graph.json 생성 완료');
+
+            // 2. graph.json 읽기
+            const graphData = await readFile(graphJsonPath, 'utf-8');
+            const graph = JSON.parse(graphData);
+
+            // 3. JSON을 DOT 형식으로 변환
+            const dot = convertGraphToDot(graph);
+
+            // 4. DOT을 SVG로 변환
+            const viz = new Viz({ Module, render }); // 수정된 부분
+            const svg = await viz.renderString(dot);
+
+            // 5. SVG 저장
+            await writeFile(svgOutputPath, svg, 'utf-8');
+
+            console.log(`🎨 SVG 저장 완료: ${svgOutputPath}`);
+        },
+    };
+}
+
 
 const docs_config =
 {
@@ -51,7 +126,7 @@ export async function svgToHtml(config)
         }
         catch (error) 
         {
-            /*  eslint-disable no-console */
+
             console.error('read svg path error:', error);
             return [];
         }
@@ -384,10 +459,10 @@ export function TSBuildConfig(option = {})
                 }),
                 resolve({
                     // browser 용인지 nodejs 우선인지에 따라 아래 두개 수정
-                    browser: false, preferBuiltins: true, dedupe: [//"nexacro-parser-core",
-                        //"nexacro-linter",
+                    browser: false, preferBuiltins: true, dedupe: ["nexacro-parser-core",
+                        "nexacro-linter",
                         //"prototype-linter",
-                        "nexacro-cli",
+                        //"nexacro-cli",
                         //"nexacro-pack-legacy",
                         //"nexacro-extension-vscode",
                         //"nexacro-extension-theia"
@@ -413,6 +488,7 @@ export function TSBuildConfig(option = {})
 
                 ...post_plugins,
                 writePackageDocumentation(docs_config),
+                generateGraphPlugin({}),
 
                 docs_config.useDocument ? visualizer({ filename: path.join(docs_config.writePath, docs_config.bundleAnalyzer) }) : {},
             ],

@@ -18,7 +18,6 @@ packages/**/.rollup.tscache/
 packages/**/tsconfig.tsbuildinfo
 package.json
 package-lock.json
-yarn.lock.json
 packages/**/tsconfig.json
 packages/**/*-license.html
 packages/**/*.config.*

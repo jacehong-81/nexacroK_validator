@@ -4,6 +4,7 @@ node_modules/
 .vscode/
 .rollup.cache/
 .rollup.tscache/
+.turbo/
 plugin/dist/
 plugin/types/
 plugin/metadata/

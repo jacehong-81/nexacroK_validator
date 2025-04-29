@@ -1,9 +1,25 @@
 {
     "$schema": "https://turborepo.org/schema.json",
-    "globalDependencies": [],
     "globalEnv": [
         "NODE_ENV"
     ],
+    "globalDependencies": [
+        ".env",
+        "tsconfig.json"
+    ],
+    "globalPassThroughEnv": [
+        "HOME",
+        "PATH",
+        "SHELL"
+    ],
+    "ui": "tui",
+    "concurrency": "50%",
+    "cacheDir": ".turbo/cache",
+    "envMode": "strict",
+    "dangerouslyDisablePackageManagerCheck": true,
+    "remoteCache": {
+        "enabled": false
+    },
     "tasks": {
         "build": {
             "dependsOn": [

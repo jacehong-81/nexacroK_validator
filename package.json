@@ -58,12 +58,17 @@
     "tsuml2": "^0.17.0",
     "tsx": "^4.15.1",
     "turbo": "^2.5.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "viz.js": "^2.1.2"
   },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "clean": "turbo run clean",
+    "turbo-graph": "turbo run build --graph",
+    "turbo-dry-run": "turbo run build --dry-run",
+    "turbo-prune": "turbo prune",
+    "turbo-save-graph": "turbo run build --graph=graph.json",
     "lint": "pnpm run ignore-sync && pnpm run lint:check",
     "lint:check": "pnpm eslint packages/**/*.{js,ts}",
     "lint:fix": "pnpm eslint --fix packages/**/*.{js,ts}",
@@ -85,6 +90,7 @@
   "packageManager": "pnpm@10.10.0",
   "dependencies": {
     "awilix": "^12.0.5",
+    "execa": "^9.5.2",
     "fs-extra": "^11.3.0",
     "lodash": "^4.17.21",
     "reflect-metadata": "^0.2.2",
