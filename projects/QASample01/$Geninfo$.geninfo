@@ -13,7 +13,7 @@
       <File url="environment.xml" checksum="20250401152747" errormsg=""/>
       <File url="typedefinition.xml" checksum="20250401170047" errormsg=""/>
       <File url="appvariables.xml" checksum="20250401152813" errormsg=""/>
-      <File url="_resource_\_theme_\blue\theme.xcss" checksum="20250401152813" errormsg=""/>
+      <File url="_resource_\_theme_\blue\theme.xcss" checksum="20250430123807" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\framework\Framework.json" checksum="20240611104116" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\resources\Resource.json" checksum="20240611104118" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\CompBase.json" checksum="20240611104114" errormsg=""/>
@@ -22,6 +22,9 @@
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ListView.json" checksum="20240611104118" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\DeviceAPI.json" checksum="20240611104114" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\MobileComp.json" checksum="20240611104118" errormsg=""/>
+      <File url="Application_Desktop.xadl" checksum="20250430124200" errormsg=""/>
+      <File url="_resource_\_theme_\blue\" checksum="" errormsg=""/>
+      <File url="_resource_\_xcss_\test.xcss" checksum="20250430124200" errormsg=""/>
     </Info>
   </GenInfo>
 </root>
