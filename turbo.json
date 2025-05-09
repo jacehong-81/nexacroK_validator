@@ -44,8 +44,8 @@
         "build-chain": {
             "dependsOn": [
                 "build-parser-core",
-                "build-linter",
                 "build-cli",
+                "build-linter",
                 "build-extension-theia",
                 "build-extension-vscode",
                 "build-pack-legacy",
@@ -56,8 +56,8 @@
         "dev-chain": {
             "dependsOn": [
                 "dev-parser-core",
-                "dev-linter",
                 "dev-cli",
+                "dev-linter",
                 "dev-extension-theia",
                 "dev-extension-vscode",
                 "dev-pack-legacy",
@@ -69,8 +69,8 @@
         "clean-chain": {
             "dependsOn": [
                 "clean-parser-core",
-                "clean-linter",
                 "clean-cli",
+                "clean-linter",
                 "clean-extension-theia",
                 "clean-extension-vscode",
                 "clean-pack-legacy",
