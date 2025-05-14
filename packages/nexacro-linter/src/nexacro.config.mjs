@@ -99,7 +99,7 @@ export default [
     rules: {
       "xcss/design-token-color-coverage": [
         "error",
-        { tokenSet: ["#111", "#222", "var(--primary)"] },
+        { tokenSet: ["#111", "#222", "var(--primary)"] }, // -nexa-define 
       ],
       "xcss/design-token-font-coverage": [
         "warn",
