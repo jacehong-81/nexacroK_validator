@@ -18,7 +18,7 @@
     "url": "https://github.com/jacehong-81/nexacroK_validator"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c --no-cache",
     "build-docs": "rollup -c --docs all",
     "dev": "rollup -c -w",
     "clean": "rimraf .rollup.cache .rollup.tscache dist types docs && pnpm run compile:clean",

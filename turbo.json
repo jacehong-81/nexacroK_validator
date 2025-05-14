@@ -98,7 +98,8 @@
         "build-linter": {
             "dependsOn": [
                 "nexacro-parser-core#build",
-                "nexacro-cli#build"
+                "nexacro-cli#build",
+                "nexacro-linter#build"
             ],
             "outputs": [
                 "dist/**"

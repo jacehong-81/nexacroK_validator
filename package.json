@@ -59,7 +59,8 @@
     "tsx": "^4.15.1",
     "turbo": "^2.5.2",
     "typescript": "^5.4.5",
-    "@aduh95/viz.js": "^3.7.0"
+    "@aduh95/viz.js": "^3.7.0",
+    "execa": "^9.5.2"
   },
   "scripts": {
     "build": "turbo run build",

@@ -449,17 +449,18 @@ export function TSBuildConfig(option = {})
                     tsconfig: './tsconfig.json',
                     incremental: true,
                     exclude: ["**/*.d.ts"],  // .d.ts 파일 제외
-                    transformers:
+                    /*transformers:
                     {
                         before: [],
                         after: [],
                         afterDeclarations: []
-                    }
+                    }*/
 
                 }),
                 resolve({
                     // browser 용인지 nodejs 우선인지에 따라 아래 두개 수정
                     browser: false, preferBuiltins: true, dedupe: ["nexacro-parser-core",
+                        "nexacro-cli",
                         "nexacro-linter",
                         //"prototype-linter",
                         //"nexacro-cli",

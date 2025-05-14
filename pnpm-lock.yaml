@@ -78,6 +78,9 @@ importers:
       eslint-plugin-prettier:
         specifier: ^5.2.6
         version: 5.4.0(eslint-config-prettier@9.1.0(eslint@9.26.0))(eslint@9.26.0)(prettier@3.5.3)
+      execa:
+        specifier: ^9.5.2
+        version: 9.5.3
       glob:
         specifier: ^10.3.10
         version: 10.4.5
