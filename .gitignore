@@ -5,6 +5,7 @@ node_modules/
 .rollup.cache/
 .rollup.tscache/
 .turbo/
+
 plugin/dist/
 plugin/types/
 plugin/metadata/
@@ -13,3 +14,7 @@ projects/
 
 dist/
 types/
+
+# PNPM store cache (do not commit)
+# project freezing 시에 zero-install 때 사용용
+.pnpm-store/

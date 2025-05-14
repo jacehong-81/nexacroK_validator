@@ -29,8 +29,19 @@
   "type": "module",
   "typings": "./dist/index.d.ts",
   "dependencies": {
+    "css-tree": "^3.1.0",
     "fast-json-patch": "^3.1.1",
     "fast-xml-parser": "^5.2.1",
-    "postcss": "^8.5.3"
+    "postcss": "^8.5.3",
+    "valtio": "^2.1.5",
+    "awilix": "^12.0.5",
+    "execa": "^9.5.2",
+    "fs-extra": "^11.3.0",
+    "lodash": "^4.17.21",
+    "quickjs-emscripten": "^0.31.0",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "postcss-import": "^16.1.0"
   }
 }

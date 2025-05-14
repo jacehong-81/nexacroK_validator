@@ -5,7 +5,7 @@
     ],
     "globalDependencies": [
         ".env",
-        "tsconfig.json"
+        "tsconfig.base.json"
     ],
     "globalPassThroughEnv": [
         "HOME",
@@ -97,7 +97,8 @@
         },
         "build-linter": {
             "dependsOn": [
-                "nexacro-parser-core#build"
+                "nexacro-parser-core#build",
+                "nexacro-cli#build"
             ],
             "outputs": [
                 "dist/**"
@@ -117,7 +118,7 @@
         },
         "build-cli": {
             "dependsOn": [
-                "nexacro-linter#build"
+                "^build"
             ],
             "outputs": [
                 "dist/**"

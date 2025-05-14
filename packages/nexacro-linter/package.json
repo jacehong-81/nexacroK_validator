@@ -37,6 +37,12 @@
     "estraverse": "^5.3.0",
     "levn": "^0.4.1",
     "regexpp": "^3.2.0",
-    "nexacro-parser-core": "workspace:*"
+    "nexacro-parser-core": "workspace:*",
+    "awilix": "^12.0.5",
+    "execa": "^9.5.2",
+    "fs-extra": "^11.3.0",
+    "lodash": "^4.17.21",
+    "quickjs-emscripten": "^0.31.0",
+    "reflect-metadata": "^0.2.2"
   }
 }
