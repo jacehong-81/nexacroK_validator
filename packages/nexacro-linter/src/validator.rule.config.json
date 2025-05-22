@@ -1,0 +1,101 @@
+{
+    "use_accessibility_validate": true,
+    "scope": {
+        "serviceUrls": [
+            "/Base",
+            "/FormBase",
+            "/User"
+        ],
+        "screenIds": [
+            "scr_common_*",
+            "scr_login"
+        ]
+    },
+    "rules": [
+        {
+            "id": "a11y/use-editable-component-required-name",
+            "enabled": true,
+            "target": [
+                "Edit",
+                "TextField",
+                "TextArea"
+            ],
+            "description": "Edit 계열은 name 속성이 필수입니다.",
+            "condition": {
+                "attributeMissing": "name"
+            }
+        },
+        {
+            "id": "a11y/use-image-component-alt-or-description",
+            "enabled": true,
+            "target": [
+                "ImageViewer",
+                "Sketch"
+            ],
+            "description": "이미지는 alt 또는 description이 필요합니다.",
+            "condition": {
+                "attributeMissing": [
+                    "alt",
+                    "description"
+                ]
+            }
+        },
+        {
+            "id": "a11y/use-data-component-first-entry-label",
+            "enabled": true,
+            "target": [
+                "Grid",
+                "ListView"
+            ],
+            "description": "Grid나 ListView는 첫 항목(label) 정보가 필요합니다.",
+            "condition": {
+                "firstEntryLabelRequired": true
+            }
+        },
+        {
+            "id": "a11y/use-container-component-representative-label",
+            "enabled": true,
+            "target": [
+                "Div",
+                "View"
+            ],
+            "description": "Div/View는 대표 콘텐츠를 설명하는 label이 필요합니다.",
+            "condition": {
+                "attributeMissing": [
+                    "label",
+                    "aria-label"
+                ]
+            }
+        },
+        {
+            "id": "a11y/use-action-component-text-required",
+            "enabled": true,
+            "target": [
+                "Button",
+                "CheckBox",
+                "Radio"
+            ],
+            "description": "Button 등은 text 속성이 필수입니다.",
+            "condition": {
+                "attributeMissing": "text"
+            }
+        }
+    ],
+    "filters": [
+        {
+            "ruleId": "a11y/use-action-component-text-required",
+            "ignoreIf": {
+                "component": "Button",
+                "attributes": {
+                    "icononly": "true"
+                }
+            }
+        },
+        {
+            "ruleId": "a11y/use-container-component-representative-label",
+            "ignoreIf": {
+                "hasOnlyDecorativeChildren": true
+            }
+        }
+    ]
+}
