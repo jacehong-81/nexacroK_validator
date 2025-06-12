@@ -41,6 +41,6 @@
     "rollup-plugin-executable": "^1.6.3"
   },
   "bin": {
-    "nexacro-linter": "./dist/linter.js"
+    "nexacro-validator": "./dist/linter.js"
   }
 }

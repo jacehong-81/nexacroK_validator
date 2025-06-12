@@ -461,7 +461,7 @@ export function TSBuildConfig(option = {})
                     // browser 용인지 nodejs 우선인지에 따라 아래 두개 수정
                     browser: false, preferBuiltins: true, dedupe: ["nexacro-parser-core",
                         "nexacro-cli",
-                        "nexacro-linter",
+                        "nexacro-validator",
                         //"prototype-linter",
                         //"nexacro-cli",
                         //"nexacro-pack-legacy",

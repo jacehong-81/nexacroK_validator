@@ -217,7 +217,7 @@ importers:
 
   packages/nexacro-extension-vscode/packages/nexacro-vscode-sample: {}
 
-  packages/nexacro-linter:
+  packages/nexacro-validator:
     dependencies:
       ajv:
         specifier: ^8.17.1

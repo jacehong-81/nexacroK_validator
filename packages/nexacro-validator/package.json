@@ -1,5 +1,5 @@
 {
-  "name": "nexacro-linter",
+  "name": "nexacro-validator",
   "version": "0.0.1",
   "description": "A static analysis tool designed for Nexacro projects.",
   "author": "TOBESOFT.Co.,Ltd.",

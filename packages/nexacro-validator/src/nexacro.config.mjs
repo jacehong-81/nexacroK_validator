@@ -13,12 +13,12 @@ import
   notForTags,
   onlyForExts,
   onlyForClass,
-} from "nexacro-linter/dsl.js";
+} from "nexacro-validator/dsl.js";
 
 
 const define_attr = ["id", "taborder"]; // 이렇게 변수 형태로 define 도 가능
 
-/** @type {import("nexacro-linter").LinterConfig} */
+/** @type {import("nexacro-validator").LinterConfig} */
 
 export default [
   ////////////////////////////////////////////////////////////////////////

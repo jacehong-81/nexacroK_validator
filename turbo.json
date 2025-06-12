@@ -99,7 +99,7 @@
             "dependsOn": [
                 "nexacro-parser-core#build",
                 "nexacro-cli#build",
-                "nexacro-linter#build"
+                "nexacro-validator#build"
             ],
             "outputs": [
                 "dist/**"
