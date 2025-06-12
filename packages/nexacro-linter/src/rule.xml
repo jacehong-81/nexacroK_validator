@@ -1,0 +1,20 @@
+<xs:element name="Static">
+  <xs:complexType>
+    <xs:attribute name="id" type="xs:string" />
+    <xs:attribute name="taborder" type="xs:integer" />
+    <xs:attribute name="text" type="xs:string" />
+    <xs:attribute name="left" type="xs:string" />
+    <xs:attribute name="top" type="xs:string" />
+    <xs:attribute name="width" type="xs:string" />
+    <xs:attribute name="height" type="xs:string" />
+    <xs:attribute name="onclick" type="xs:string" />
+  </xs:complexType>
+
+  <xs:annotation>
+    <xs:appinfo><![CDATA[
+      {
+        "transform": "this.${id} = new nexacro.Static({ id: '${id}', text: '${text}', left: '${left}', top: '${top}', width: '${width}', height: '${height}', taborder: ${taborder}, onclick: '${onclick}' })"
+      }
+    ]]></xs:appinfo>
+  </xs:annotation>
+</xs:element>

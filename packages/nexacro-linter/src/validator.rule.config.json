@@ -98,4 +98,41 @@
             }
         }
     ]
+},
+{
+    "priority": "error",
+    "override": {
+        "off": {
+            "conditions": [
+                {
+                    "type": "Button", //typeid ? csscontrolname ? 
+                    "cssontrolname": "",
+                    "cssclasses": [
+                        "submit",
+                        "ok"
+                    ],
+                    "properties": [ /*or*/
+                        {
+                            "visible": "false",
+                            "chk_user_prop": "0001", /* and*/
+                        },
+                        {
+                            "chk_user_prop": "0002",
+                        }
+                    ],
+                    "message": ""
+                },
+                {
+                    "type": ""
+                }
+            ],
+        },
+        "custom_info": {
+            "types": [
+                {},
+                {},
+            ],
+            "message": ""
+        }
+    }
 }

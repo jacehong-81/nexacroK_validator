@@ -1,5 +1,5 @@
 {
-  "name": "nexacroplugin",
+  "name": "@tobesoft/nodejs-tools",
   "private": true,
   "type": "module",
   "engineStrict": true,

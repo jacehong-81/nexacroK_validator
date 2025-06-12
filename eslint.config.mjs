@@ -87,10 +87,7 @@ export default [
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/ban-ts-comment": "off",
-      //"@typescript-eslint/no-empty-object-type": "error",    // Object 타입 사용 금지 
-      //"@typescript-eslint/no-unsafe-function-type": "error", // Function 타입 사용 금지
-      //"@typescript-eslint/no-wrapper-object-types": "error", // Object, Number 등 래퍼 객체 타입 사용 금지
-      '@typescript-eslint/no-restricted-types': [ // 위 3개 아래 설정으로 변경
+      '@typescript-eslint/no-restricted-types': [
         'error',
         {
           types: {
