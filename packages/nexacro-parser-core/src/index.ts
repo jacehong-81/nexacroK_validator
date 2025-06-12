@@ -1,5 +1,5 @@
 export const nexacroParser = {
-    parser(input: string) 
+    parser(input: string)
     {
         // 향후 실제 파싱 로직으로 대체 예정
         return {
@@ -8,4 +8,5 @@ export const nexacroParser = {
             result: "parsed content (stub)"
         };
     }
+
 };

@@ -7,6 +7,7 @@ import specificity from 'specificity'; // 우선순위 비교용
 // 1. CSS 파싱
 
 
+
 // 1. CSS 읽기
 const css = fs.readFileSync('./style.css', 'utf-8');
 

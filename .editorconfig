@@ -1,0 +1,132 @@
+# 최상위 EditorConfig 설정임을 명시
+root = true
+
+##########################################################
+# 모든 파일 공통 기본 설정
+##########################################################
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+##########################################################
+# Windows 스크립트 파일 (CRLF)
+##########################################################
+[*.bat]
+end_of_line = crlf
+indent_style = tab
+
+[*.cmd]
+end_of_line = crlf
+indent_style = tab
+
+##########################################################
+# 마크다운 (.md): 공백 제거 안 함
+##########################################################
+[*.md]
+trim_trailing_whitespace = false
+indent_style = space
+indent_size = 4
+
+##########################################################
+# YAML
+##########################################################
+[*.yml]
+indent_style = space
+indent_size = 4
+
+[*.yaml]
+indent_style = space
+indent_size = 4
+
+##########################################################
+# JSON
+##########################################################
+[*.json]
+indent_style = space
+indent_size = 4
+
+##########################################################
+# JavaScript / TypeScript / 모듈 파일
+##########################################################
+[*.js]
+indent_style = space
+indent_size = 4
+
+[*.mjs]
+indent_style = space
+indent_size = 4
+
+[*.cjs]
+indent_style = space
+indent_size = 4
+
+[*.ts]
+indent_style = space
+indent_size = 4
+
+[*.tsx]
+indent_style = space
+indent_size = 4
+
+##########################################################
+# HTML / XML
+##########################################################
+[*.html]
+indent_style = space
+indent_size = 4
+
+[*.htm]
+indent_style = space
+indent_size = 4
+
+[*.xml]
+indent_style = space
+indent_size = 4
+
+##########################################################
+# CSS / SCSS / LESS
+##########################################################
+[*.css]
+indent_style = space
+indent_size = 4
+
+[*.scss]
+indent_style = space
+indent_size = 4
+
+[*.sass]
+indent_style = space
+indent_size = 4
+
+[*.less]
+indent_style = space
+indent_size = 4
+
+##########################################################
+# Shell Scripts
+##########################################################
+[*.sh]
+indent_style = space
+indent_size = 4
+
+##########################################################
+# 설정 파일 (.ini, .toml 등)
+##########################################################
+[*.ini]
+indent_style = space
+indent_size = 4
+
+[*.toml]
+indent_style = space
+indent_size = 4
+
+##########################################################
+# 텍스트 파일
+##########################################################
+[*.txt]
+indent_style = space
+indent_size = 4
