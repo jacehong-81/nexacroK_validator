@@ -2,9 +2,10 @@ import postcss from 'postcss';
 import css from 'postcss-safe-parser';
 import { JSDOM } from 'jsdom';
 import cssSelect from 'css-select';
-import specificity from 'specificity'; // 우선순위 비교용 
+import specificity from 'specificity'; // 우선순위 비교용
 //  [2] CSS AST 파싱 →  [3] 선택자 매칭 →  [4] 스타일 누적 계산
 // 1. CSS 파싱
+
 
 // 1. CSS 읽기
 const css = fs.readFileSync('./style.css', 'utf-8');
@@ -15,12 +16,12 @@ const root = postcss().process(css, { parser: safeParser }).root;
 // 3. selector → declarations + specificity 매핑
 const rules = [];
 
-root.walkRules(rule => 
+root.walkRules(rule =>
 {
     const selector = rule.selector;
     const declarations = {};
 
-    rule.walkDecls(decl => 
+    rule.walkDecls(decl =>
     {
         declarations[decl.prop] = decl.value;
     });
@@ -36,9 +37,9 @@ root.walkRules(rule =>
 });
 
 // 4. 셀렉터별 우선순위 비교 예시
-rules.sort((a, b) => 
+rules.sort((a, b) =>
 {
-    for (let i = 0; i < 3; i++) 
+    for (let i = 0; i < 3; i++)
     {
         if (a.specificity[i] !== b.specificity[i])
             return b.specificity[i] - a.specificity[i];
