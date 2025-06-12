@@ -10,7 +10,7 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 ##########################################################
 # Windows 스크립트 파일 (CRLF)
@@ -29,104 +29,104 @@ indent_style = tab
 [*.md]
 trim_trailing_whitespace = false
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 ##########################################################
 # YAML
 ##########################################################
 [*.yml]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.yaml]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 ##########################################################
 # JSON
 ##########################################################
 [*.json]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 ##########################################################
 # JavaScript / TypeScript / 모듈 파일
 ##########################################################
 [*.js]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.mjs]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.cjs]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.ts]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.tsx]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 ##########################################################
 # HTML / XML
 ##########################################################
 [*.html]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.htm]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.xml]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 ##########################################################
 # CSS / SCSS / LESS
 ##########################################################
 [*.css]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.scss]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.sass]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.less]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 ##########################################################
 # Shell Scripts
 ##########################################################
 [*.sh]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 ##########################################################
 # 설정 파일 (.ini, .toml 등)
 ##########################################################
 [*.ini]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [*.toml]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 ##########################################################
 # 텍스트 파일
 ##########################################################
 [*.txt]
 indent_style = space
-indent_size = 4
+indent_size = 2
