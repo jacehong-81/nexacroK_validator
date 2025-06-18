@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaInfo version="2.0">
+  <Object id="nexacro.VoiceRecognition">
+    <ObjectInfo finalclass="false" inheritance="" classname="nexacro.VoiceRecognition" shorttypename="VoiceRecognition" csstypename="" csscontrolname="" group="DeviceAdaptor" subgroup="Object" csspseudo="" container="false" composite="false" tabstop="false" cssstyle="false" contents="false" formats="false" contentseditor="" defaultwidth="" defaultheight="" registration="deny" edittype="" useinitvalue="false" popup="false" edittypecomponent="" dblclickevent="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="音声認識に関連する機能を処理するオブジェクトです。" />
+    <PropertyInfo>
+      <Property name="entityanalyzersvcurl" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="音声データからEntitiyを分析するためのサービスのURLを設定するプロパティです。" csspropertyname="" normalpropertyname="entityanalyzersvcurl" stringrc="false" defaultstringrc="false" />
+      <Property name="id" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="ID" readonly="true" initonly="true" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="true" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="VoiceRecognitionの一意識別子を持つプロパティです。" csspropertyname="" normalpropertyname="id" stringrc="false" defaultstringrc="false" />
+      <Property name="intentanalyzersvcurl" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="音声データからIntentを分析するためのサービスのURLを設定するプロパティです。" csspropertyname="" normalpropertyname="intentanalyzersvcurl" stringrc="false" defaultstringrc="false" />
+      <Property name="parent" group="Hidden" subgroup="" refreshinfo="" displayinfo="" edittype="Object" readonly="true" initonly="false" hidden="true" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="VoiceRecognitionの親オブジェクトを持つ読み取り専用のプロパティです。" csspropertyname="" normalpropertyname="parent" stringrc="false" defaultstringrc="false" />
+      <Property name="servicelanguage" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="音声データ処理のための基準言語を設定するプロパティです。" csspropertyname="" normalpropertyname="servicelanguage" stringrc="false" defaultstringrc="false" />
+      <Property name="serviceregion" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="音声データの処理のための基準地域を設定するプロパティです。" csspropertyname="" normalpropertyname="serviceregion" stringrc="false" defaultstringrc="false" />
+      <Property name="subscriptionkey" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="音声解析サービスを提供するために発行されたキー値を設定するプロパティです。" csspropertyname="" normalpropertyname="subscriptionkey" stringrc="false" defaultstringrc="false" />
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo />
+    </CSSInfo>
+    <StatusInfo />
+    <ControlInfo />
+    <MethodInfo>
+      <Method name="recognize" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="音声分析サービスを提供するサーバーと連動して音声データの入力を受けるメソッドです。">
+        <Syntax text="VoiceRecognition.recognize()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="resetData" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="内部に保存されたIntent、Entityデータをすべて削除するメソッドです。">
+        <Syntax text="VoiceRecognition.resetData()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="setup" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="動的に変更されたプロパティをVoiceRecognitionに適用するメソッドです。">
+        <Syntax text="VoiceRecognition.setup()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="speak" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="引数として渡された文字列を音声で出力するメソッドです。">
+        <Syntax text="VoiceRecognition.speak( strText )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strText" type="String" in="false" out="false" option="false" variable="false" description="音声に変換する文字列を設定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+    </MethodInfo>
+    <EventHandlerInfo />
+  </Object>
+</MetaInfo>

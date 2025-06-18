@@ -1,0 +1,139 @@
+{
+  "name": "VoiceRecognition",
+  "version": "21.0.0.9999",
+  "minnexacroversion": "21.0.0.9999",
+  "description": "VoiceRecognition DeviceAdaptor with MSSpeech",
+  "moduletype": "component",
+  "license": "",
+  "scripts": [ "VoiceRecognition/VoiceRecognition.js" ],
+  "objInfo": [ "VoiceRecognition/metainfo/VoiceRecognition.info" ],
+
+  "help": "VoiceRecognition/help",
+  "images": "VoiceRecognition/_resource_/_images_",
+  "licensefiles": "VoiceRecognition/License",
+  "userfolder": [ "VoiceRecognition/Libraries" ],
+
+  "installinfo": {
+    "copy_resources": [
+      {
+        "file": "./VoiceRecognition/Libraries/_windows_/x86/voicerecognition.dll",
+        "targetpath": "%COMPONENTHOME%/VoiceRecognition/x86/voicerecognition.dll"
+      },
+      {
+        "file": "./VoiceRecognition/Libraries/_windows_/x86/Microsoft.CognitiveServices.Speech.core.dll",
+        "targetpath": "%COMPONENTHOME%/VoiceRecognition/x86/Microsoft.CognitiveServices.Speech.core.dll"
+      },
+      {
+        "file": "./VoiceRecognition/Libraries/_windows_/x86/Microsoft.CognitiveServices.Speech.extension.kws.dll",
+        "targetpath": "%COMPONENTHOME%/VoiceRecognition/x86/Microsoft.CognitiveServices.Speech.extension.kws.dll"
+      },
+      {
+        "file": "./VoiceRecognition/Libraries/_windows_/x64/voicerecognition.dll",
+        "targetpath": "%COMPONENTHOME%/VoiceRecognition/x64/voicerecognition.dll"
+      },
+	    {
+        "file": "./VoiceRecognition/Libraries/_windows_/x64/Microsoft.CognitiveServices.Speech.core.dll",
+        "targetpath": "%COMPONENTHOME%/VoiceRecognition/x64/Microsoft.CognitiveServices.Speech.core.dll"
+      },
+      {
+        "file": "./VoiceRecognition/Libraries/_windows_/x64/Microsoft.CognitiveServices.Speech.extension.kws.dll",
+        "targetpath": "%COMPONENTHOME%/VoiceRecognition/x64/Microsoft.CognitiveServices.Speech.extension.kws.dll"
+      }
+    ],
+    "update_resources": {
+      "Windows": {
+        "windows 10": {
+          "resources": [
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x86/voicerecognition.dll",
+              "version": "20190822",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x86"
+            },
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x86/Microsoft.CognitiveServices.Speech.core.dll",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x86",
+              "version": "20190822"
+            },
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x86/Microsoft.CognitiveServices.Speech.extension.kws.dll",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x86",
+              "version": "20190822"
+            }
+          ]
+        },
+        "windows 8 / 8.1, windows 7, windows vista, windows server 2003, windows server 2008, windows server 2012, windows server 2016": {
+          "resources": [
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x86/voicerecognition.dll",
+              "version": "20190822",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x86"
+            },
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x86/Microsoft.CognitiveServices.Speech.core.dll",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x86",
+              "version": "20190822"
+            },
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x86/Microsoft.CognitiveServices.Speech.extension.kws.dll",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x86",
+
+              "version": "20190822"
+            }
+          ]
+        },
+        "windows 10 64bit": {
+          "resources": [
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x64/voicerecognition.dll",
+              "version": "20190822",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x64"
+            },
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x64/icrosoft.CognitiveServices.Speech.core.dll",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x64",
+              "version": "20190822"
+            },
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x64/Microsoft.CognitiveServices.Speech.extension.kws.dll",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x64",
+
+              "version": "20190822"
+            }
+          ]
+        },
+        "windows 8 / 8.1 64bit, windows 7 64bit, windows vista 64bit, windows server 2003 64bit, windows server 2008 64bit, windows server 2012 64bit, windows server 2016 64bit": {
+          "resources": [
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x64/voicerecognition.dll",
+              "version": "20190822",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x64"
+            },
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x64/Microsoft.CognitiveServices.Speech.core.dll",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x64",
+              "version": "20190822"
+            },
+            {
+              "type": "Module",
+              "file": "./VoiceRecognition/Libraries/_windows_/x64/Microsoft.CognitiveServices.Speech.extension.kws.dll",
+              "targetpath": "%COMPONENTHOME%/VoiceRecognition/x64",
+
+              "version": "20190822"
+            }
+          ]
+        }
+      }
+    }
+  }
+}										

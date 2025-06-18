@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaInfo version="2.0">
+  <Object id="nexacro.XAgent">
+  <ObjectInfo finalclass="false" inheritance="" classname="nexacro.XAgent" shorttypename="XAgent" csstypename="" csscontrolname="" group="Object" subgroup="Object" csspseudo="" container="false" composite="false" tabstop="false" cssstyle="false" contents="false" formats="false" contentseditor="" defaultwidth="" defaultheight="" registration="allow" edittype="" useinitvalue="false" popup="false" edittypecomponent="" dblclickevent="" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTクライアントコンポーネントです。" />
+    <PropertyInfo>
+      <Property name="protocol" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="ws" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE" description="X-AGENTサーバーとの通信時に使用するプロトコルを設定するプロパティです。" csspropertyname="" normalpropertyname="" stringrc="false" defaultstringrc="false" />
+      <Property name="port" group="" subgroup="" refreshinfo="" displayinfo="" edittype="Number" defaultvalue="49020" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTサーバーのポートを設定するプロパティです。" csspropertyname="" normalpropertyname="port" stringrc="false" defaultstringrc="false" />
+      <Property name="addport" group="" subgroup="" refreshinfo="" displayinfo="" edittype="Number" defaultvalue="5" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTサーバーへの接続に失敗した際のリトライ回数を設定するプロパティです。" csspropertyname="" normalpropertyname="addport" stringrc="false" defaultstringrc="false" />
+      <Property name="project" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTサーバーのプロジェクト名を設定する属性です。" csspropertyname="" normalpropertyname="project" stringrc="false" defaultstringrc="false" />
+      <Property name="license" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTのライセンスを設定する属性です。" csspropertyname="" normalpropertyname="license" stringrc="false" defaultstringrc="false" />
+      <Property name="updateurl" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTモジュールの更新URL情報を設定する属性です。" csspropertyname="" normalpropertyname="updateurl" stringrc="false" defaultstringrc="false" />
+      <Property name="adminapiurl" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT ADMIN API URL 情報を設定する属性です。" csspropertyname="" normalpropertyname="adminapiurl" stringrc="false" defaultstringrc="false" />
+      <Property name="name" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="true" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTの名前を設定するプロパティです。" csspropertyname="" normalpropertyname="name" stringrc="false" defaultstringrc="false" />
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo />
+    </CSSInfo>
+    <StatusInfo />
+    <ControlInfo />
+    <MethodInfo>
+      <Method name="addEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTのイベントにハンドラ関数を追加するメソッドです。">
+        <Syntax text="XAgent.addEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="イベントに追加されたハンドラ関数のインデックスを返します。&#xA;同一のハンドラ関数が既に存在する場合は該当のハンドラ関数のインデックスを返します。&#xA;正常に追加されなかった場合は「-1」を返します。" />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="イベント発生時に実行されるハンドラ関数をオブジェクト型として指定します。" />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="ハンドラ関数が定義されているスコープを指定します。" />
+            <Argument name="strEventID" type="String" in="true" out="true" option="true" variable="true" description="対象のイベントIDを指定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="addEventHandlerLookup" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="検索結果の関数をX-AGENTのイベントにハンドラ関数として追加するメソッドです。">
+        <Syntax text="XAgent.addEventHandlerLookup( strEventID, strFunc, objTarget )">
+          <Return type="Number" description="イベントに追加されたハンドラ関数のインデックスを返します。&#xA;同一のハンドラ関数が既に存在する場合は該当のハンドラ関数のインデックスを返します。&#xA;正常に追加されなかった場合は「-1」を返します。" />
+          <Arguments>
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="検索対象のハンドラ関数が定義されているスコープを指定します。指定した領域で見つからない場合は上位の領域で検索を行います。" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="対象のイベントIDを指定します。" />
+            <Argument name="strFunc" type="String" in="false" out="false" option="false" variable="false" description="検索対象のハンドラ関数の名前を文字列として指定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="clearEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="特定のイベントに登録されたハンドラ関数をすべて削除するメソッドです。">
+        <Syntax text="XAgent.clearEventHandler( strEventID )">
+          <Return type="Number" description="特定のイベントで削除されたハンドラ関数の数を返します。" />
+          <Arguments>
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="すべてのハンドラ関数を削除するイベントのIDを設定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="connect" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTサーバーに接続を行うメソッドです。">
+        <Syntax text="XAgent.connect( [strProject [,strLicense [,strUpdateUrl]]] )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="接続するプロジェクト名を設定します。&#xA;&#xA;値を省略した場合、project属性の値が適用されます。" />
+            <Argument name="strLicense" type="String" in="false" out="false" option="false" variable="false" description="接続するライセンスを設定します。&#xA;&#xA;値を省略した場合、license属性の値が適用されます。" />
+            <Argument name="strUpdateUrl" type="String" in="false" out="false" option="false" variable="false" description="接続する更新URL情報を設定します。&#xA;&#xA;値を省略した場合、updateurl属性の値が適用されます。" />
+            <Argument name="strAdminApiUrl" type="String" in="false" out="false" option="false" variable="false" description="接続するAdmin API URL情報を設定します。&#xA;&#xA;値を省略した場合、adminapiurl属性の値が適用されます。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="disconnect" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTサーバーの接続を解除するメソッドです。">
+        <Syntax text="XAgent.disconnect()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="version" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="現在接続中のX-AGENTサーバーおよびモジュールのバージョンを要求するメソッドです。">
+        <Syntax text="XAgent.version( [strType] )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strType" type="String" in="false" out="false" option="false" variable="false" description="設定されたバージョン情報を返します。&#xA;&quot;all&quot;を設定した場合、X-AGENTサーバー及びモジュールの情報値を返します。&#xA;&quot;server&quot;を設定した場合、X-AGENTサーバーのバージョン情報を返します。&#xA;&quot;modules&quot;を設定した場合、X-AGENTにインストールされたモジュールのバージョン情報を返します。">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="installed" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Windowsレジストリを利用してサードパーティアプリのインストール状況を確認するメソッドです。">
+        <Syntax text="XAgent.installed( strRegistryPath, strRegistryKey )">
+          <Return type="String" description="レジストリの値を文字列で返します。">
+          <Arguments>
+            <Argument name="strRegistryPath" type="String" in="false" out="false" option="false" variable="false" description="レジストリのパスCLSID(GUID)を設定する文字列です。">
+            <Argument name="strRegistryKey" type="String" in="false" out="false" option="false" variable="false" description="照会するレジストリキーの名前を設定する文字列です。">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="configure" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTプロジェクトの設定を要求するメソッドです。">
+        <Syntax text="XAgent.configure( strProject, strLicense, strUpdateUrl )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="プロジェクト名を設定する文字列です。">
+            <Argument name="strLicense" type="String" in="false" out="false" option="false" variable="false" description="ライセンスを設定する文字列です。">
+            <Argument name="strUpdateUrl" type="String" in="false" out="false" option="false" variable="false" description="更新URLを設定する文字列です。">
+            <Argument name="strAdminApiUrl" type="String" in="false" out="false" option="false" variable="false" description="Admin API URLを設定する文字列です。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="updateModule" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTモジュールのアップデートを要求するメソッドです。">
+        <Syntax text="XAgent.updateModule( strName, strVersion, strFile, strProject [, bForceInstall] )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strName" type="String" in="false" out="false" option="false" variable="false" description="アップデートモジュールの名前を設定します。">
+            <Argument name="strVersion" type="String" in="false" out="false" option="false" variable="false" description="アップデートモジュールのバージョンを設定します。">
+            <Argument name="strFile" type="String" in="false" out="false" option="false" variable="false" description="アップデートモジュールのファイル名を設定します。">
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="アップデートモジュールのプロジェクト名を設定します。">
+            <Argument name="bForceInstall" type="Boolean" in="false" out="false" option="false" variable="false" description="アップデートモジュールの強制インストールを設定します。">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="updateModules" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTサーバーに複数のモジュールをアップデートするよう要求するメソッドです。">
+        <Syntax text="XAgent.updateModules( strProject )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="アップデートするプロジェクト名を設定します。">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="status" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTサーバーにインストールされたモジュールのプロセス状態を要求するメソッドです。">
+        <Syntax text="XAgent.status( strType )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strType" type="String" in="false" out="false" option="false" variable="false" description="指定した対象の状態を返します。&#xA;&quot;server&quot;を設定した場合、X-AGENTサーバーの状態値を返します。&#xA;&quot;process&quot;を設定した場合、X-AGENTモジュールの状態値を返します。">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="updateModuleCheck" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTモジュールアップデートのダウンロード状態を確認するメソッドです。">
+        <Syntax text="XAgent.updateModuleCheck()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="execute" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTサーバーにインストールされたモジュールを実行するリクエストを行うメソッドです。">
+        <Syntax text="XAgent.execute( strModule, strFunc, objParam)">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strModule" type="String" in="false" out="false" option="false" variable="false" description="X-AGENTにインストールされたモジュールの名前を設定します。">
+            <Argument name="strFunc" type="String" in="false" out="false" option="false" variable="false" description="X-AGENTにインストールされたモジュールのメソッド名を設定します。">
+            <Argument name="objParam" type="Object" in="false" out="false" option="false" variable="false" description="X-AGENTサーバーに呼び出されるメソッドに渡される引数を設定します。&#xA;JSONオブジェクトを設定します。">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="findEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTの特定イベントからハンドラ関数を検索してインデックスを返すメソッドです。">
+        <Syntax text="XAgent.findEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="特定のイベントで検出したハンドラ関数のインデックスを返します。&#xA;&#xA;特定のイベントで検索するハンドラ関数が存在しない場合、「-1」を返します。" />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="検索するハンドラ関数を設定します。" />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="検索するハンドラ関数が定義された領域を設定します。" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="ハンドラ関数を検索するイベントのIDを設定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="getEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTの特定のイベントで指定されたインデックスに該当するハンドラ関数を返すメソッドです。">
+        <Syntax text="XAgent.getEventHandler( strEventID, nIdx )">
+          <Return type="Object" description="コンポーネントの削除に成功すると、削除されたコンポーネントのオブジェクトを返します。&#xA;&#xA;コンポーネントの削除に失敗すると、「null」を返します。" />
+          <Arguments>
+            <Argument name="nIdx" type="Number" in="false" out="false" option="false" variable="false" description="取得しようとするハンドラ関数のインデックスを設定します。&#xA;&#xA;ハンドラ関数のインデックスは、「0」から開始します。" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="ハンドラ関数を取得するイベントのIDを設定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="removeEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTの特定イベントからハンドラ関数を削除するメソッドです。">
+        <Syntax text="XAgent.removeEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="ハンドラ関数の削除に成功すると、「1」を返します。&#xA;&#xA;ハンドラ関数の削除に失敗すると、「0」を返します。" />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="削除するハンドラ関数を設定します。" />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="削除するハンドラ関数が定義された領域を設定します。" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="ハンドラ関数を削除するイベントのIDを設定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="removeEventHandlerLookup" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTの特定のイベントから検索された関数と同じハンドラ関数を削除するメソッドです。">
+        <Syntax text="XAgent.removeEventHandlerLookup( strEventID, strFunc, objTarget )">
+          <Return type="Number" description="ハンドラ関数の削除に成功すると、「1」を返します。&#xA;&#xA;ハンドラ関数の削除に失敗すると、「0」を返します。" />
+          <Arguments>
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="削除するハンドラ関数が定義された領域を設定します。&#xA;該当領域に関数が定義されていない場合は、上位の領域に上がりながら検索します。" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="ハンドラ関数を削除するイベントIDを設定します。" />
+            <Argument name="strFunc" type="String" in="false" out="false" option="false" variable="false" description="削除するハンドラ関数名を文字列に設定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="setEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTの特定のイベントの最初のハンドラ関数を変更するメソッドです。">
+        <Syntax text="XAgent.setEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="最初のハンドラ関数の変更に成功すると、「0」を返します。&#xA;&#xA;最初のハンドラ関数の変更に失敗すると、「-1」を返します。" />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="既存のハンドラ関数を置換する関数を設定します。" />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="置き換えるハンドラ関数が定義された領域を設定します。" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="ハンドラ関数を変更するイベントのIDを設定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="setEventHandlerLookup" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENTの特定のイベントの最初のハンドラ関数を、検索された関数に変更するメソッドです。">
+        <Syntax text="XAgent.setEventHandlerLookup( strEventID, strFunc, objTarget )">
+          <Return type="Number" description="最初のハンドラ関数の変更に成功すると、「0」を返します。&#xA;&#xA;最初のハンドラ関数の変更に失敗すると、「-1」を返します。" />
+          <Arguments>
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="置き換えるハンドラ関数を検索する領域を設定します。&#xA;該当領域に関数が定義されていない場合は、上位領域に上がりながら検索します。" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="ハンドラ関数を変更するイベントのIDを設定します。" />
+            <Argument name="strFunc" type="Object" in="false" out="false" option="false" variable="false" description="既存のハンドラ関数を置換する関数名を文字列に設定します。" />
+          </Arguments>
+        </Syntax>
+      </Method>
+    </MethodInfo>
+    <EventHandlerInfo>
+      <EventHandler name="onerror" group="" deprecated="false" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTに要求された作業が失敗した際に発生するイベントです。">
+        <Syntax text="XAgent.onerror(obj:nexacro.XAgent,e:nexacro.XAgentErrorEventInfo);">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="obj" type="nexacro.XAgent" in="false" out="false" option="false" variable="false" description="このイベントが発生したオブジェクト。" />
+            <Argument name="e" type="nexacro.XAgentErrorEventInfo" in="false" out="false" option="false" variable="false" description="Eventオブジェクト。" />
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="onsuccess" group="" deprecated="false" unused="false" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENTサーバーに要求された作業が成功した際に発生するイベントです。">
+        <Syntax text="XAgent.onsuccess(obj:nexacro.XAgent,e:nexacro.XAgentEventInfo);">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="obj" type="nexacro.XAgent" in="false" out="false" option="false" variable="false" description="このイベントが発生したオブジェクト。" />
+            <Argument name="e" type="nexacro.XAgentEventInfo" in="false" out="false" option="false" variable="false" description="Eventオブジェクト。" />
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+    </EventHandlerInfo>
+  </Object>
+</MetaInfo>

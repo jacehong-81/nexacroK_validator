@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaInfo version="2.0">
+  <Object id="nexacro.VoiceRecognition">
+    <ObjectInfo finalclass="false" inheritance="" classname="nexacro.VoiceRecognition" shorttypename="VoiceRecognition" csstypename="" csscontrolname="" group="DeviceAdaptor" subgroup="Object" csspseudo="" container="false" composite="false" tabstop="false" cssstyle="false" contents="false" formats="false" contentseditor="" defaultwidth="" defaultheight="" registration="deny" edittype="" useinitvalue="false" popup="false" edittypecomponent="" dblclickevent="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This object is used to process features related to voice recognition." />
+    <PropertyInfo>
+      <Property name="entityanalyzersvcurl" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This property is used to set the URL of a service that analyzes the entities obtained from voice data." csspropertyname="" normalpropertyname="entityanalyzersvcurl" stringrc="false" defaultstringrc="false" />
+      <Property name="id" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="ID" readonly="true" initonly="true" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="true" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This property holds the identification of a VoiceRecognition." csspropertyname="" normalpropertyname="id" stringrc="false" defaultstringrc="false" />
+      <Property name="intentanalyzersvcurl" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This property is used to set the URL of a service that analyzes the intents obtained from voice data." csspropertyname="" normalpropertyname="intentanalyzersvcurl" stringrc="false" defaultstringrc="false" />
+      <Property name="parent" group="Hidden" subgroup="" refreshinfo="" displayinfo="" edittype="Object" readonly="true" initonly="false" hidden="true" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This read-only property holds the parent object of a VoiceRecognition." csspropertyname="" normalpropertyname="parent" stringrc="false" defaultstringrc="false" />
+      <Property name="servicelanguage" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This property is used to set a base language for processing voice data." csspropertyname="" normalpropertyname="servicelanguage" stringrc="false" defaultstringrc="false" />
+      <Property name="serviceregion" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This property is used to set a base region for processing voice data." csspropertyname="" normalpropertyname="serviceregion" stringrc="false" defaultstringrc="false" />
+      <Property name="subscriptionkey" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This property is used to set the key issued to receive voice analysis service." csspropertyname="" normalpropertyname="subscriptionkey" stringrc="false" defaultstringrc="false" />
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo />
+    </CSSInfo>
+    <StatusInfo />
+    <ControlInfo />
+    <MethodInfo>
+      <Method name="recognize" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method is used to receive voice data from a server that provides voice recognition service.">
+        <Syntax text="VoiceRecognition.recognize()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="resetData" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method is used to remove all the intent and entity data.">
+        <Syntax text="VoiceRecognition.resetData()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="setup" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method is used to apply a dynamically-changed property to a VoiceRecognition.">
+        <Syntax text="VoiceRecognition.setup()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="speak" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method converts an argument in the text form into speech outpout.">
+        <Syntax text="VoiceRecognition.speak( strText )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strText" type="String" in="false" out="false" option="false" variable="false" description="This is a string that will be converted into speech." />
+          </Arguments>
+        </Syntax>
+      </Method>
+    </MethodInfo>
+    <EventHandlerInfo />
+  </Object>
+</MetaInfo>

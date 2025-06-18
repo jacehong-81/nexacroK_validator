@@ -1,0 +1,35 @@
+//==============================================================================
+//
+//  TOBESOFT Co., Ltd.
+//  Copyright 2017 TOBESOFT Co., Ltd.
+//  All Rights Reserved.
+//
+//  NOTICE: TOBESOFT permits you to use, modify, and distribute this file 
+//          in accordance with the terms of the license agreement accompanying it.
+//
+//  Readme URL: http://www.nexacro.co.kr/legal/nexacro17-public-license-readme-1.1.html	
+//
+//==============================================================================
+
+if (nexacro.TabBarControl)
+{
+    var _pTabBar = nexacro.TabBarControl.prototype;
+
+    _pTabBar.createCssDesignContents = function ()
+    {
+        // TOOD : tabbar item 임의 생성 필요
+    };
+
+    _pTabBar.updatePreviewPosition = function ()
+    {
+        this.setOffsetHeight(100);
+
+        var form = this._p_parent;
+        var offset_left = (form._adjust_width / 2) - (this._adjust_width / 2);
+        var offset_top = (form._adjust_height / 2) - (this._adjust_height / 2);
+
+        this.move(offset_left, offset_top);
+    };
+
+    delete _pTabBar;
+}

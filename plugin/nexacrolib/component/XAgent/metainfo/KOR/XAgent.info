@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaInfo version="2.0">
+  <Object id="nexacro.XAgent">
+    <ObjectInfo finalclass="false" inheritance="" classname="nexacro.XAgent" shorttypename="XAgent" csstypename="" csscontrolname="" group="Object" subgroup="Object" csspseudo="" container="false" composite="false" tabstop="false" cssstyle="false" contents="false" formats="false" contentseditor="" defaultwidth="" defaultheight="" registration="allow" edittype="" useinitvalue="false" popup="false" edittypecomponent="" dblclickevent="" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="X-AGENT 서버와 통신할 수 있는 클라이언트 컴포넌트입니다." />
+    <PropertyInfo>
+      <Property name="protocol" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="ws" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE" description="X-AGENT 서버와 통신 시 사용할 Protocol를 설정하는 속성입니다." csspropertyname="" normalpropertyname="" stringrc="false" defaultstringrc="false" />
+      <Property name="port" group="" subgroup="" refreshinfo="" displayinfo="" edittype="Number" defaultvalue="49020" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 서버의 포트를 설정하는 속성입니다." csspropertyname="" normalpropertyname="port" stringrc="false" defaultstringrc="false" />
+      <Property name="addport" group="" subgroup="" refreshinfo="" displayinfo="" edittype="Number" defaultvalue="5" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 서버의 연결이 실패 했을 경우 추가 연결 시도 횟수를 설정하는 속성입니다." csspropertyname="" normalpropertyname="addport" stringrc="false" defaultstringrc="false" />
+      <Property name="project" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 서버의 프로젝트명을 설정하는 속성입니다." csspropertyname="" normalpropertyname="project" stringrc="false" defaultstringrc="false" />
+      <Property name="license" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 라이선스를 설정하는 속성입니다." csspropertyname="" normalpropertyname="license" stringrc="false" defaultstringrc="false" />
+      <Property name="updateurl" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 모듈 업데이트 URL 정보를 설정하는 속성입니다." csspropertyname="" normalpropertyname="updateurl" stringrc="false" defaultstringrc="false" />
+      <Property name="adminapiurl" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT Admin API URL 정보를 설정하는 속성입니다." csspropertyname="" normalpropertyname="adminapiurl" stringrc="false" defaultstringrc="false" />
+      <Property name="name" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="true" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 의 이름을 설정하는 속성입니다." csspropertyname="" normalpropertyname="name" stringrc="false" defaultstringrc="false" />
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo />
+    </CSSInfo>
+    <StatusInfo />
+    <ControlInfo />
+    <MethodInfo>
+      <Method name="addEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 의 특정 이벤트에 핸들러 함수를 추가하는 메소드입니다.">
+        <Syntax text="XAgent.addEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="이벤트에 추가된 핸들러 함수의 인덱스를 반환합니다.&#xA;동일한 핸들러 함수가 이미 있다면 해당 핸들러 함수의 인덱스를 반환합니다.&#xA;정상적으로 추가되지 않은 경우에는 -1 을 반환합니다." />
+          <Arguments>
+            <Argument name="funcName" type="String" in="false" out="false" option="false" variable="false" description="함수명&#xA;&#xA;funcName을 별도로 지정하지 않는 경우에는 srvId와 같은 값으로 설정합니다. &#xA;DLL 모듈을 로드하고 함수를 실행하는 execute 서비스의 경우에는 해당 함수명을 설정합니다." />
+            <Argument name="moduleName" type="String" in="false" out="false" option="false" variable="false" description="모듈 이름" />
+            <Argument name="paramObj" type="Object" in="false" out="false" option="false" variable="false" description="파라미터&#xA;&#xA;X-AGENT 서비스 별 설정할 수 있는 파라미터는 하단 표를 참고하세요." />
+            <Argument name="srvId" type="String" in="false" out="false" option="false" variable="false" description="X-AGENT 서비스명&#xA;&#xA;사용할 수 있는 서비스명은 아래와 같습니다.&#xA;- project: 프로젝트 초기화&#xA;- version: version 정보 확인&#xA;- update-module: 1개 모듈 업데이트&#xA;- update-modules: 1개 이상 모듈 업데이트&#xA;- update-module-check: 모듈 업데이트 중 다운로드 완료 여부 확인&#xA;- status: 서버 실행 상태 확인&#xA;- installed: 타사 앱 설치 여부 확인&#xA;- execute: 모듈 실행" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="addEventHandlerLookup" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="함수를 검색하여 X-AGENT 의 특정 이벤트에 핸들러 함수로 추가하는 메소드입니다.">
+        <Syntax text="XAgent.addEventHandlerLookup( strEventID, strFunc, objTarget )">
+          <Return type="Number" description="이벤트에 추가된 핸들러 함수의 인덱스를 반환합니다.&#xA;동일한 핸들러 함수가 이미 있다면 해당 핸들러 함수의 인덱스를 반환합니다.&#xA;정상적으로 추가되지 않은 경우에는 &quot;-1&quot;을 반환합니다." />
+          <Arguments>
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="핸들러 함수를 검색할 영역을 설정합니다.&#xA;해당 영역에 함수가 정의되지 않았다면 상위 영역으로 올라가며 검색을 합니다." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="핸들러 함수가 추가될 이벤트의 ID를 설정합니다." />
+            <Argument name="strFunc" type="String" in="false" out="false" option="false" variable="false" description="이벤트 발생 시 수행될 핸들러 함수의 이름을 문자열로 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="clearEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="특정 이벤트에 등록된 핸들러 함수를 모두 제거하는 메소드입니다.">
+        <Syntax text="XAgent.clearEventHandler( strEventID )">
+          <Return type="Number" description="특정 이벤트에서 제거된 핸들러 함수의 갯수를 반환합니다." />
+          <Arguments>
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="모든 핸들러 함수를 제거할 이벤트의 ID를 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="connect" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 서버와 연결을 수행하는 메소드입니다.">
+        <Syntax text="XAgent.connect( [strProject [,strLicense [,strUpdateUrl [,strAdminApiUrl]]]] )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="연결할 프로젝트명을 설정합니다.&#xA;&#xA;값 생략 시 project 속성값이 적용됩니다." />
+            <Argument name="strLicense" type="String" in="false" out="false" option="false" variable="false" description="연결할 라이선스를 설정합니다.&#xA;&#xA;값 생략 시 license 속성값이 적용됩니다." />
+            <Argument name="strUpdateUrl" type="String" in="false" out="false" option="false" variable="false" description="연결할 업데이트 URL 정보를 설정합니다.&#xA;&#xA;값 생략 시 updateurl 속성값이 적용됩니다." />
+            <Argument name="strAdminApiUrl" type="String" in="false" out="false" option="false" variable="false" description="연결할 Admin API URL 정보를 설정합니다.&#xA;&#xA;값 생략 시 adminapiurl 속성값이 적용됩니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="disconnect" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Firefox,Opera,Windows NRE" description="X-AGENT 서버와 연결을 종료합니다.">
+        <Syntax text="XAgent.disconnect()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="version" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="현재 접속중인 X-AGENT 서버의 버전 및 모듈의 버전을 요청하는 메소드입니다.">
+        <Syntax text="XAgent.version( [strType] )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strType" type="String" in="false" out="false" option="false" variable="false" description="설정한 버전 정보를 반환합니다.&#xA;&quot;all&quot; 설정 시 X-AGENT 서버 및 모듈들의 정보 값을 반환합니다.&#xA;&quot;server&quot; 설정 시 X-AGENT 서버 버전 정보를 반환합니다.&#xA;&quot;modules&quot; 설정 시 X-AGENT 설치된 모듈들의 버전 정보를 반환합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="installed" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="윈도우 레지스트리를 이용해 타사 앱 설치 여부를 요청하는 메소드입니다.">
+        <Syntax text="XAgent.installed( strRegistryPath, strRegistryKey )">
+          <Return type="String" description="레지스트리 값을 문자열로 반환합니다." />
+          <Arguments>
+            <Argument name="strRegistryPath" type="String" in="false" out="false" option="false" variable="false" description="레지스트리의 경로 CLSID(GUID)를 설정하는 문자열입니다." />
+            <Argument name="strRegistryKey" type="String" in="false" out="false" option="false" variable="false" description="조회하려는 레지스트리 키의 이름을 설정하는 문자열입니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="configure" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 프로젝트 설정을 요청하는 메소드입니다.">
+        <Syntax text="XAgent.configure( strProject, strLicense, strUpdateUrl )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="프로젝트명을 설정하는 문자열입니다." />
+            <Argument name="strLicense" type="String" in="false" out="false" option="false" variable="false" description="라이선스를 설정하는 문자열입니다." />
+            <Argument name="strUpdateUrl" type="String" in="false" out="false" option="false" variable="false" description="업데이트 URL을 설정하는 문자열입니다." />
+            <Argument name="strAdminApiUrl" type="String" in="false" out="false" option="false" variable="false" description="Admin API URL을 설정하는 문자열입니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="updateModule" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 모듈의 업데이트를 요청하는 메소드입니다.">
+        <Syntax text="XAgent.updateModule( strName, strVersion, strFile, strProject [, bForceInstall] )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strName" type="String" in="false" out="false" option="false" variable="false" description="업데이트 모듈의 이름을 설정합니다." />
+            <Argument name="strVersion" type="String" in="false" out="false" option="false" variable="false" description="업데이트 모듈의 버전을 설정합니다." />
+            <Argument name="strFile" type="String" in="false" out="false" option="false" variable="false" description="업데이트 모듈의 파일명을 설정합니다." />
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="업데이트 모듈의 프로젝트명 설정합니다." />
+            <Argument name="bForceInstall" type="Boolean" in="false" out="false" option="false" variable="false" description="업데이트 모듈의 강제 설치 여부를 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="updateModules" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 서버에 여러 모듈을 업데이트 요청하는 메소드입니다.">
+        <Syntax text="XAgent.updateModules( strProject )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="업데이트 프로젝트명을 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="status" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 서버의 설치된 모듈들의 프로세스 상태를 요청하는 메소드입니다.">
+        <Syntax text="XAgent.status( strType )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strType" type="String" in="false" out="false" option="false" variable="false" description="설정한 대상의 상태를 반환합니다.&#xA;&quot;server&quot; 설정 시 X-AGENT 서버의 상태 값을 반환합니다.&#xA;&quot;process&quot; 설정 시 X-AGENT 모듈의 상태 값을 반환합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="updateModuleCheck" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 모듈 업데이트의 다운로드 상태를 요청하는 메소드입니다.">
+        <Syntax text="XAgent.updateModuleCheck()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="execute" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 서버의 설치된 모듈을 실행 요청하는 메소드입니다.">
+        <Syntax text="XAgent.execute( strModule, strFunc, objParam)">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strModule" type="String" in="false" out="false" option="false" variable="false" description="X-AGENT 설치된 모듈의 이름을 설정합니다." />
+            <Argument name="strFunc" type="String" in="false" out="false" option="false" variable="false" description="X-AGENT 설치된 모듈의 메소드 이름을 설정합니다." />
+            <Argument name="objParam" type="Object" in="false" out="false" option="false" variable="false" description="X-AGENT 서버에 호출할 메소드에 전달될 인수를 설정합니다.&#xA;JSON 오브젝트를 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="findEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 의 특정 이벤트에서 핸들러 함수를 찾아 인덱스를 반환하는 메소드입니다.">
+        <Syntax text="XAgent.findEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="특정 이벤트에서 찾은 핸들러 함수의 인덱스를 반환합니다.&#xA;&#xA;특정 이벤트에 찾으려는 핸들러 함수가 존재하지 않으면 -1 을 반환합니다." />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="찾으려고 하는 핸들러 함수를 설정합니다." />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="찾으려고 하는 핸들러 함수가 정의된 영역을 설정합니다." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="핸들러 함수를 찾을 이벤트의 ID를 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="getEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 의 특정 이벤트에서 지정된 인덱스에 해당하는 핸들러 함수를 반환하는 메소드입니다.">
+        <Syntax text="XAgent.getEventHandler( strEventID, nIdx )">
+          <Return type="Object" description="지정된 인덱스의 핸들러 함수 오브젝트를 반환합니다.&#xA;&#xA;지정된 인덱스에 핸들러 함수가 존재하지 않는다면 null 을 반환합니다." />
+          <Arguments>
+            <Argument name="nIdx" type="Number" in="false" out="false" option="false" variable="false" description="얻으려고 하는 핸들러 함수의 인덱스를 설정합니다.&#xA;&#xA;핸들러 함수의 인덱스는 0 부터 시작합니다." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="핸들러 함수를 얻을 이벤트의 ID를 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="removeEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 의 특정 이벤트에서 핸들러 함수를 제거하는 메소드입니다.">
+        <Syntax text="XAgent.removeEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="핸들러 함수 제거에 성공하면 1 을 반환합니다.&#xA;&#xA;핸들러 함수 제거에 실패하면 0 을 반환합니다." />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="제거할 핸들러 함수를 설정합니다." />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="제거할 핸들러 함수가 정의된 영역을 설정합니다." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="핸들러 함수를 제거할 이벤트의 ID를 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="removeEventHandlerLookup" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="XAgent 의 특정 이벤트에서 검색된 함수와 동일한 핸들러 함수를 제거하는 메소드입니다.">
+        <Syntax text="XAgent.removeEventHandlerLookup( strEventID, strFunc, objTarget )">
+          <Return type="Number" description="핸들러 함수 제거에 성공하면 1 을 반환합니다.&#xA;&#xA;핸들러 함수 제거에 실패하면 0 을 반환합니다." />
+          <Arguments>
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="제거할 핸들러 함수가 정의된 영역을 설정합니다.&#xA;해당 영역에 함수가 정의되지 않았다면 상위 영역으로 올라가며 검색을 합니다." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="핸들러 함수를 제거할 이벤트의 ID를 설정합니다." />
+            <Argument name="strFunc" type="String" in="false" out="false" option="false" variable="false" description="제거할 핸들러 함수의 이름을 문자열로 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="setEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 의 특정 이벤트에서 첫번째 핸들러 함수를 변경하는 메소드입니다.">
+        <Syntax text="XAgent.setEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="첫번째 핸들러 함수 변경에 성공하면 0 을 반환합니다.&#xA;&#xA;첫번째 핸들러 함수 변경에 실패하면 -1 을 반환합니다." />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="기존 핸들러 함수를 대체할 함수를 설정합니다." />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="대체할 핸들러 함수가 정의된 영역을 설정합니다." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="핸들러 함수를 변경할 이벤트의 ID를 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="setEventHandlerLookup" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="X-AGENT 의 특정 이벤트에서 첫번째 핸들러 함수를 검색된 함수로 변경하는 메소드입니다.">
+        <Syntax text="XAgent.setEventHandlerLookup( strEventID, strFunc, objTarget )">
+          <Return type="Number" description="첫번째 핸들러 함수 변경에 성공하면 0 을 반환합니다.&#xA;&#xA;첫번째 핸들러 함수 변경에 실패하면 -1 을 반환합니다." />
+          <Arguments>
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="대체할 핸들러 함수를 검색할 영역을 설정합니다.&#xA;해당 영역에 함수가 정의되지 않았다면 상위 영역으로 올라가며 검색을 합니다." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="핸들러 함수를 변경할 이벤트의 ID를 설정합니다." />
+            <Argument name="strFunc" type="Object" in="false" out="false" option="false" variable="false" description="기존 핸들러 함수를 대체할 함수의 이름을 문자열로 설정합니다." />
+          </Arguments>
+        </Syntax>
+      </Method>
+    </MethodInfo>
+    <EventHandlerInfo>
+      <EventHandler name="onerror" group="" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 에서 요청된 작업이 실패했을 때 발생하는 이벤트입니다.">
+        <Syntax text="XAgent.onerror(obj:nexacro.XAgent,e:nexacro.XAgentErrorEventInfo);">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="obj" type="nexacro.XAgent" in="false" out="false" option="false" variable="false" description="Event가 발생한 Object." />
+            <Argument name="e" type="nexacro.XAgentErrorEventInfo" in="false" out="false" option="false" variable="false" description="Event Object." />
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="onsuccess" group="" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-AGENT 에서 요청된 작업이 성공했을 때 발생하는 이벤트입니다.">
+        <Syntax text="XAgent.onsuccess(obj:nexacro.XAgent,e:nexacro.XAgentEventInfo);">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="obj" type="nexacro.XAgent" in="false" out="false" option="false" variable="false" description="Event가 발생한 Object." />
+            <Argument name="e" type="nexacro.XAgentEventInfo" in="false" out="false" option="false" variable="false" description="Event Object." />
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+    </EventHandlerInfo>
+  </Object>
+</MetaInfo>

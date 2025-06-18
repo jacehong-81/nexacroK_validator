@@ -1,0 +1,56 @@
+{
+  "name": "Chart",
+  "version": "21.0.0.9999",
+  "description": "Nexacro Chart",
+  "license": "http://www.nexacro.co.kr/legal/nexacrochart-public-license-readme-1.0.html",
+  "scripts": [
+    "Chart/ChartBase.js",
+    "Chart/BasicChart.js",
+    "Chart/BubbleChart.js",
+    "Chart/PieChart.js",
+    "Chart/GaugeChart.js",
+    "Chart/RadarChart.js"
+  ],
+  "objInfo": [
+    "Chart/metainfo/BasicChart.info",
+    "Chart/metainfo/BubbleChart.info",
+    "Chart/metainfo/PieChart.info",
+    "Chart/metainfo/ChartAxisControl.info",
+    "Chart/metainfo/ChartCategoryAxisControl.info",
+    "Chart/metainfo/ChartBasicSeriesControl.info",
+    "Chart/metainfo/ChartBubbleSeriesControl.info",
+    "Chart/metainfo/ChartPieSeriesControl.info",
+    "Chart/metainfo/ChartBoardControl.info",
+    "Chart/metainfo/ChartLegendControl.info",
+    "Chart/metainfo/ChartRangebarControl.info",
+    "Chart/metainfo/ChartTitleControl.info",
+    "Chart/metainfo/ChartTooltipControl.info",
+    "Chart/metainfo/ChartCrosshairControl.info",
+    "Chart/metainfo/ChartSelectionControl.info",
+    "Chart/metainfo/ChartClickEventInfo.info",
+    "Chart/metainfo/ChartDragEventInfo.info",
+    "Chart/metainfo/ChartRangeZoomEventInfo.info",
+    "Chart/metainfo/ChartMouseEventInfo.info",
+    "Chart/metainfo/RadarChart.info",
+    "Chart/metainfo/ChartRadarSeriesControl.info",
+    "Chart/metainfo/ChartRadarCategoryAxisControl.info",
+    "Chart/metainfo/ChartRadarValueAxisControl.info",
+    "Chart/metainfo/GaugeChart.info",
+    "Chart/metainfo/ChartGaugeSeriesControl.info",
+    "Chart/metainfo/ChartGaugeValueAxisControl.info",
+    "Chart/metainfo/ChartGaugeIndicatorControl.info",
+    "Chart/metainfo/AxisChartBase.info",
+    "Chart/metainfo/ChartBase.info",
+    "Chart/metainfo/SeriesBase.info"
+  ],
+  "designscripts": [
+
+    "Chart/Design/DesignChartBase.js",
+    "Chart/Design/DesignBasicChart.js",
+    "Chart/Design/DesignBubbleChart.js",
+    "Chart/Design/DesignPieChart.js",
+    "Chart/Design/DesignRadarChart.js",
+    "Chart/Design/DesignGaugeChart.js"
+  ],
+  "help": "Chart/Help/nexacro_chart.chm"
+}

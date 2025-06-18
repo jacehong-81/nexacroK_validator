@@ -1,0 +1,6 @@
+framework module VoiceRecognition {
+  umbrella header "VoiceRecognition.h"
+
+  export *
+  module * { export * }
+}

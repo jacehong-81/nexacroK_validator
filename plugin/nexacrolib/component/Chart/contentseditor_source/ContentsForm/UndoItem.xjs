@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script version="1.0" type="xscript5.1"><![CDATA[//UndoItem
+nexacro.CTSE.Chart._UndoItem = function(perform, data) 
+{
+	this.perform = perform;
+	this.data = data;
+};
+
+var __UndoItem = nexacro.CTSE.Chart._UndoItem.prototype;
+__UndoItem._type_name = "UndoItem";
+
+
+delete __UndoItem;]]></Script>

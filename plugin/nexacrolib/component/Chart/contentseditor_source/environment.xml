@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ENV version="2.1">
+  <Environment themeid="theme::chartEditorBlack">
+    <ScreenDefinition>
+      <Screen id="black" type="desktop" formlayoutwidth="1024" formlayoutheight="768" themeid="theme::chartEditorBlack"/>
+      <Screen id="white" type="desktop" formlayoutwidth="1024" formlayoutheight="768" themeid="theme::chartEditorWhite"/>
+    </ScreenDefinition>
+    <Variables/>
+    <Cookies/>
+  </Environment>
+</ENV>

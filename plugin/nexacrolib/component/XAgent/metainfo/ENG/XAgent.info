@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaInfo version="2.0">
+  <Object id="nexacro.XAgent">
+  <ObjectInfo finalclass="false" inheritance="" classname="nexacro.XAgent" shorttypename="XAgent" csstypename="" csscontrolname="" group="Object" subgroup="Object" csspseudo="" container="false" composite="false" tabstop="false" cssstyle="false" contents="false" formats="false" contentseditor="" defaultwidth="" defaultheight="" registration="allow" edittype="" useinitvalue="false" popup="false" edittypecomponent="" dblclickevent="" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="X-Agent client component." />
+    <PropertyInfo>
+      <Property name="protocol" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="ws" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE" description="Properties for setting the protocol used for connection with the X-AGENT server." csspropertyname="" normalpropertyname="" stringrc="false" defaultstringrc="false" />
+      <Property name="port" group="" subgroup="" refreshinfo="" displayinfo="" edittype="Number" defaultvalue="49020" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="Properties for setting the port of X-AGENT server." csspropertyname="" normalpropertyname="port" stringrc="false" defaultstringrc="false" />
+      <Property name="addport" group="" subgroup="" refreshinfo="" displayinfo="" edittype="Number" defaultvalue="5" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="Properties for setting the number of retries when the connection to the X-AGENT server has failed." csspropertyname="" normalpropertyname="addport" stringrc="false" defaultstringrc="false" />
+      <Property name="project" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="Properties for setting the project name of the X-AGENT server." csspropertyname="" normalpropertyname="project" stringrc="false" defaultstringrc="false" />
+      <Property name="license" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="Properties for setting the license of the X-AGENT." csspropertyname="" normalpropertyname="license" stringrc="false" defaultstringrc="false" />
+      <Property name="updateurl" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="Properties for setting the update URL information for the X-AGENT module." csspropertyname="" normalpropertyname="updateurl" stringrc="false" defaultstringrc="false" />
+      <Property name="adminapiurl" group="" subgroup="" refreshinfo="" displayinfo="" edittype="String" defaultvalue="" readonly="false" initonly="false" hidden="false" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE" description="Properties for setting the X-AGENT Admin API URL information." csspropertyname="" normalpropertyname="adminapiurl" stringrc="false" defaultstringrc="false" />
+      <Property name="name" group="Information" subgroup="" refreshinfo="" displayinfo="" edittype="String" readonly="false" initonly="false" hidden="true" control="false" expr="false" bind="false" deprecated="false" unused="false" mandatory="false" objectinfo="" enuminfo="" enuminfo2="" unitinfo="" delimiter="" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="Properties for setting the name of the X-AGENT." csspropertyname="" normalpropertyname="name" stringrc="false" defaultstringrc="false" />
+    </PropertyInfo>
+    <CSSInfo>
+      <PropertyInfo />
+    </CSSInfo>
+    <StatusInfo />
+    <ControlInfo />
+    <MethodInfo>
+       <Method name="addEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method is used to add a handler to a certain event of a X-AGENT.">
+        <Syntax text="XAgent.addEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="It returns the index of the handler that has been added to the event by this method.&#xA;If the same handler already exists, it will return the index of the existing handler.&#xA;If it fails to add a handler successfully, it will return -1." />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="A handler function to add" />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="The scope in which the handler function is valid" />
+            <Argument name="strEventID" type="String" in="true" out="true" option="true" variable="true" description="The ID of an event that the handler will be added to" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="addEventHandlerLookup" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method is used to find a function and add it to a certain event of a X-AGENT as a handler.">
+        <Syntax text="XAgent.addEventHandlerLookup( strEventID, strFunc, objTarget )">
+          <Return type="Number" description="It returns the index of the handler that has been added to the event by this method.&#xA;If the same handler already exists, it will return the index of the existing handler.&#xA;If it fails to add a handler successfully, it will return -1." />
+          <Arguments>
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="A scope in which you search for the handler function&#xA;If this method fails to find the function in a specified scope, it will then search the regions at higher levels." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="The ID of an event that the handler will be added to" />
+            <Argument name="strFunc" type="String" in="false" out="false" option="false" variable="false" description="A string that represents the name of a handler function to add" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="clearEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method is used to delete all the event handlers registered in a certain event.">
+        <Syntax text="XAgent.clearEventHandler( strEventID )">
+          <Return type="Number" description="It returns the number of deleted event handler functions." />
+          <Arguments>
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="The ID of an event, all of whose handlers will be deleted" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="connect" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to connect to an X-AGENT server.">
+        <Syntax text="XAgent.connect( [strProject [,strLicense [,strUpdateUrl]]] )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="Sets the project name to connect to.&#xA;&#xA;If omitted, the project property value is applied." />
+            <Argument name="strLicense" type="String" in="false" out="false" option="false" variable="false" description="Sets the license to connect to.&#xA;&#xA;If omitted, the license property value is applied." />
+            <Argument name="strUpdateUrl" type="String" in="false" out="false" option="false" variable="false" description="Sets the update URL information to connect to.&#xA;&#xA;If omitted, the updateurl property value is applied." />
+            <Argument name="strAdminApiUrl" type="String" in="false" out="false" option="false" variable="false" description="Sets the Admin API URL information to connect to.&#xA;&#xA;If omitted, the adminapiurl property value is applied." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="disconnect" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to disconnect from an X-AGENT server.">
+        <Syntax text="XAgent.disconnect()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="version" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to request the version of the currently connected X-AGENT server and the version of its modules.">
+        <Syntax text="XAgent.version( [strType] )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strType" type="String" in="false" out="false" option="false" variable="false" description="Returns the specified version information.&#xA;When &quot;all&quot; is specified, it returns the information values of the X-AGENT server and its modules.&#xA;When &quot;server&quot; is specified, it returns the version information of the X-AGENT server.&#xA;When &quot;modules&quot; is specified, it returns the version information of the installed modules of X-AGENT.">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="installed" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to request the installation status of a third-party app using the Windows registry.">
+        <Syntax text="XAgent.installed( strRegistryPath, strRegistryKey )">
+          <Return type="String" description="Returns the registry value as a string.">
+          <Arguments>
+            <Argument name="strRegistryPath" type="String" in="false" out="false" option="false" variable="false" description="A string that sets the CLSID (GUID) path in the registry.">
+            <Argument name="strRegistryKey" type="String" in="false" out="false" option="false" variable="false" description="A string that sets the name of the registry key to query.">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="configure" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to request the configuration of the X-AGENT project.">
+        <Syntax text="XAgent.configure( strProject, strLicense, strUpdateUrl )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="A string that sets the project name.">
+            <Argument name="strLicense" type="String" in="false" out="false" option="false" variable="false" description="A string that sets the license.">
+            <Argument name="strUpdateUrl" type="String" in="false" out="false" option="false" variable="false" description="A string that sets the update URL.">
+            <Argument name="strAdminApiUrl" type="String" in="false" out="false" option="false" variable="false" description="A string that sets the Admin API URL." />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="updateModule" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to request an update for an X-AGENT module.">
+        <Syntax text="XAgent.updateModule( strName, strVersion, strFile, strProject [, bForceInstall] )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strName" type="String" in="false" out="false" option="false" variable="false" description="Sets the name of the update module.">
+            <Argument name="strVersion" type="String" in="false" out="false" option="false" variable="false" description="Sets the version of the update module.">
+            <Argument name="strFile" type="String" in="false" out="false" option="false" variable="false" description="Sets the filename of the update module.">
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="Sets the project name for the update module.">
+            <Argument name="bForceInstall" type="Boolean" in="false" out="false" option="false" variable="false" description="Sets whether to force the installation of the update module.">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="updateModules" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to request updates for multiple modules on the X-AGENT server.">
+        <Syntax text="XAgent.updateModules( strProject )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strProject" type="String" in="false" out="false" option="false" variable="false" description="Sets the update project name.">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="status" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to request the process status of the modules installed on the X-AGENT server.">
+        <Syntax text="XAgent.status( strType )">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strType" type="String" in="false" out="false" option="false" variable="false" description="Returns the status of the specified target.&#xA;When &quot;server&quot; is specified, it returns the status value of the X-AGENT server.&#xA;When &quot;process&quot; is specified, it returns the status value of the X-AGENT module.">
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="updateModuleCheck" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to request the download status of an X-AGENT module update.">
+        <Syntax text="XAgent.updateModuleCheck()">
+          <Return type="" description="" />
+          <Arguments />
+        </Syntax>
+      </Method>
+      <Method name="execute" group="" async="false" usecontextmenu="false" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method is used to request the execution of an installed module on the X-AGENT server.">
+        <Syntax text="XAgent.execute( strModule, strFunc, objParam)">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="strModule" type="String" in="false" out="false" option="false" variable="false" description="Sets the service name to call on the X-AGENT server. " />
+            <Argument name="strFunc" type="String" in="false" out="false" option="false" variable="false" description="Sets the method name of the module to be called on the X-AGENT server." />
+            <Argument name="objParam" type="Object" in="false" out="false" option="false" variable="false" description="Sets the parameter to be delivered to the method to be called on the X-AGENT server.&#xA;Sets the JSON object. " />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="findEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method finds a handler in a certain event of a X-AGENT and returns the index of the handler.">
+        <Syntax text="XAgent.findEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="It returns the index of the handler that you attempt to find.&#xA;&#xA;If the handler does not exist, it will return -1." />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="The handler function to find" />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="The scope in which the handler function is valid" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="The ID of an event that you will search to find the handler" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="getEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This method returns a specific handler from a certain event of a X-AGENT by specifying the index number of the handler.">
+        <Syntax text="XAgent.getEventHandler( strEventID, nIdx )">
+          <Return type="Object" description="It returns the object of an event handler whose index number is specified. &#xA;&#xA;If there is no handler for the specified index number, it will return &quot;null&quot;." />
+          <Arguments>
+            <Argument name="nIdx" type="Number" in="false" out="false" option="false" variable="false" description="The index number of the event handler you want to find&#xA;&#xA;The index number begins from 0." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="The ID of an event that you search for your sought handler" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="removeEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method is used to remove a handler in a certain event of a X-AGENT.">
+        <Syntax text="XAgent.removeEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="If it succeeds in removing the handler, it will return 1.&#xA;&#xA;Otherwise, it will return 0." />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="A handler function to remove" />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="The scope in which the handler function is valid" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="The ID of the event that holds the handler" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="removeEventHandlerLookup" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method is used to find a handler in a certain event of a X-AGENT and remove it.">
+        <Syntax text="XAgent.removeEventHandlerLookup( strEventID, strFunc, objTarget )">
+          <Return type="Number" description="If it succeeds in removing the handler, it will return 1.&#xA;&#xA;Otherwise, it will return 0." />
+          <Arguments>
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="The scope in which the handler function is valid&#xA;If this method fails to find the handler in a specified scope, it will then search the regions at higher levels." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="The ID of an event that you will search to find the handler" />
+            <Argument name="strFunc" type="String" in="false" out="false" option="false" variable="false" description="A string that represents the name of a handler function to remove" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="setEventHandler" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method is used to change the first handler in a certain event of a X-AGENT.">
+        <Syntax text="XAgent.setEventHandler( strEventID, objFunc, objTarget )">
+          <Return type="Number" description="If it succeeds in changing the first handler, it will return 0.&#xA;&#xA;Otherwise, it will return -1." />
+          <Arguments>
+            <Argument name="objFunc" type="Object" in="false" out="false" option="false" variable="false" description="A handler function that will replace the existing handler" />
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="The scope in which the new handler function is valid" />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="The ID of the event that holds the existing handler" />
+          </Arguments>
+        </Syntax>
+      </Method>
+      <Method name="setEventHandlerLookup" group="" async="false" usecontextmenu="false" deprecated="false" unused="true" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE" description="This method finds a function and uses it to replace the first handler in a certain event of a X-AGENT.">
+        <Syntax text="XAgent.setEventHandlerLookup( strEventID, strFunc, objTarget )">
+          <Return type="Number" description="If it succeeds in changing the first handler, it will return 0.&#xA;&#xA;Otherwise, it will return -1." />
+          <Arguments>
+            <Argument name="objTarget" type="Object" in="false" out="false" option="false" variable="false" description="A scope in which you search for the new handler function&#xA;If this method fails to find the function in a specified scope, it will then search the regions at higher levels." />
+            <Argument name="strEventID" type="String" in="false" out="false" option="false" variable="false" description="The ID of the event that holds the existing handler" />
+            <Argument name="strFunc" type="Object" in="false" out="false" option="false" variable="false" description="A string that represents the name of a function that will replace the existing handler" />
+          </Arguments>
+        </Syntax>
+      </Method>
+    </MethodInfo>
+    <EventHandlerInfo>
+      <EventHandler name="onerror" group="" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This event occurs when a task requested to an X-AGENT server fails.">
+        <Syntax text="XAgent.onerror(obj:nexacro.XAgent,e:nexacro.XAgentErrorEventInfo);">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="obj" type="nexacro.XAgent" in="false" out="false" option="false" variable="false" description="Event generated Object." />
+            <Argument name="e" type="nexacro.XAgentErrorEventInfo" in="false" out="false" option="false" variable="false" description="Event Object." />
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+      <EventHandler name="onsuccess" group="" deprecated="false" unused="false" requirement="Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser" description="This event occurs when a task requested by an X-AGENT succeeds.">
+        <Syntax text="XAgent.onsuccess(obj:nexacro.XAgent,e:nexacro.XAgentEventInfo);">
+          <Return type="" description="" />
+          <Arguments>
+            <Argument name="obj" type="nexacro.XAgent" in="false" out="false" option="false" variable="false" description="Event generated Object." />
+            <Argument name="e" type="nexacro.XAgentEventInfo" in="false" out="false" option="false" variable="false" description="Event Object." />
+          </Arguments>
+        </Syntax>
+      </EventHandler>
+    </EventHandlerInfo>
+  </Object>
+</MetaInfo>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project version="2.0" themeid="theme::default" ctsethemeid="theme::white">
+  <ModuleDefinition url="moduledefinition.xml"/>
+  <CommonInfo>
+    <EnumInfos/>
+    <UnitInfos/>
+    <RefreshInfos/>
+  </CommonInfo>
+  <Objects>
+    <Object id="ChartBase" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartBase.info"/>
+      <Scripts>
+        <File url="ChartBase.js"/>
+      </Scripts>
+      <DesignScripts>
+        <File url="Design\DesignChartBase.js"/>
+      </DesignScripts>
+    </Object>
+    <Object id="SeriesBase" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\SeriesBase.info"/>
+    </Object>
+    <Object id="AxisChartBase" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\AxisChartBase.info"/>
+    </Object>
+    <Object id="ChartBoardControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartBoardControl.info"/>
+    </Object>
+    <Object id="ChartLegendControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartLegendControl.info"/>
+    </Object>
+    <Object id="ChartRangebarControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartRangebarControl.info"/>
+    </Object>
+    <Object id="ChartTitleControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartTitleControl.info"/>
+    </Object>
+    <Object id="ChartTooltipControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartTooltipControl.info"/>
+    </Object>
+    <Object id="ChartCrosshairControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartCrosshairControl.info"/>
+    </Object>
+    <Object id="ChartSelectionControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartSelectionControl.info"/>
+    </Object>
+    <Object id="ChartClickEventInfo" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartClickEventInfo.info"/>
+    </Object>
+    <Object id="ChartDragEventInfo" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartDragEventInfo.info"/>
+    </Object>
+    <Object id="ChartRangeZoomEventInfo" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartRangeZoomEventInfo.info"/>
+    </Object>
+    <Object id="ChartMouseEventInfo" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartMouseEventInfo.info"/>
+    </Object>
+    <Object id="ChartAxisControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartAxisControl.info"/>
+    </Object>
+    <Object id="ChartCategoryAxisControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartCategoryAxisControl.info"/>
+    </Object>
+    <Object id="BasicChart" type="inheritance" contentseditorproject="contentseditor_source\ChartCtse.xprj" contentseditorformurl="ContentsForm::BasicChartContentsEditor.xfdl">
+      <ObjectInfo url="metainfo\KOR\BasicChart.info"/>
+      <Scripts>
+        <File url="BasicChart.js"/>
+      </Scripts>
+      <DesignScripts>
+        <File url="Design\DesignBasicChart.js"/>
+      </DesignScripts>
+    </Object>
+    <Object id="ChartBasicSeriesControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartBasicSeriesControl.info"/>
+    </Object>
+    <Object id="BubbleChart" type="inheritance" contentseditorproject="contentseditor_source\ChartCtse.xprj" contentseditorformurl="ContentsForm::BubbleChartContentsEditor.xfdl">
+      <ObjectInfo url="metainfo\KOR\BubbleChart.info"/>
+      <Scripts>
+        <File url="BubbleChart.js"/>
+      </Scripts>
+      <DesignScripts>
+        <File url="Design\DesignBubbleChart.js"/>
+      </DesignScripts>
+    </Object>
+    <Object id="ChartBubbleSeriesControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartBubbleSeriesControl.info"/>
+    </Object>
+    <Object id="PieChart" type="inheritance" contentseditorproject="contentseditor_source\ChartCtse.xprj" contentseditorformurl="ContentsForm::PieChartContentsEditor.xfdl">
+      <ObjectInfo url="metainfo\KOR\PieChart.info"/>
+      <Scripts>
+        <File url="PieChart.js"/>
+      </Scripts>
+      <DesignScripts>
+        <File url="Design\DesignPieChart.js"/>
+      </DesignScripts>
+    </Object>
+    <Object id="ChartPieSeriesControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartPieSeriesControl.info"/>
+    </Object>
+    <Object id="GaugeChart" type="inheritance" contentseditorproject="contentseditor_source\ChartCtse.xprj" contentseditorformurl="ContentsForm::GaugeChartContentsEditor.xfdl">
+      <ObjectInfo url="metainfo\KOR\GaugeChart.info"/>
+      <Scripts>
+        <File url="GaugeChart.js"/>
+      </Scripts>
+      <DesignScripts>
+        <File url="Design\DesignGaugeChart.js"/>
+      </DesignScripts>
+    </Object>
+    <Object id="ChartGaugeSeriesControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartGaugeSeriesControl.info"/>
+    </Object>
+    <Object id="ChartGaugeValueAxisControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartGaugeValueAxisControl.info"/>
+    </Object>
+    <Object id="ChartGaugeIndicatorControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartGaugeIndicatorControl.info"/>
+    </Object>
+    <Object id="RadarChart" type="inheritance" contentseditorproject="contentseditor_source\ChartCtse.xprj" contentseditorformurl="ContentsForm::RadarChartContentsEditor.xfdl">
+      <ObjectInfo url="metainfo\KOR\RadarChart.info"/>
+      <Scripts>
+        <File url="RadarChart.js"/>
+      </Scripts>
+      <DesignScripts>
+        <File url="Design\DesignRadarChart.js"/>
+      </DesignScripts>
+    </Object>
+    <Object id="ChartRadarSeriesControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartRadarSeriesControl.info"/>
+    </Object>
+    <Object id="ChartRadarCategoryAxisControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartRadarCategoryAxisControl.info"/>
+    </Object>
+    <Object id="ChartRadarValueAxisControl" type="inheritance">
+      <ObjectInfo url="metainfo\KOR\ChartRadarValueAxisControl.info"/>
+    </Object>
+  </Objects>
+  <Help url=".\help\"/>
+  <License url=".\license\"/>
+  <XCSS url="_resource_\_xcss_\Chart.xcss"/>
+  <DeployInfo name="Chart" version="0" license="" description=""/>
+  <UserFolders/>
+  <Icons url=".\_icons_\"/>
+</Project>
